@@ -1,12 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 27,
+  "projectStateVersion": 29,
   "summary": "Website project for electrical contracting company BM ENTERPRISES, including core business pages and enquiry/contact functionality, with an additional \"Ongoing Projects\" page to be added in the top navigation below \"Gallery\".",
   "architectural_notes": [
     "Replace existing contact placeholders with real BM ENTERPRISES contact details: Phone 9561549685 / 7875400932; Email bmenterprises1212@gmail.com; Office A-60, Opp, Siverl Oak, Libherr Chowk, Shendra MIDC, Chh. Sambhajinagar 431154."
   ],
   "known_issues": [
-    "Image removal request is ambiguous; need clarification on which image (filename/page/section) should be removed."
+    "Image removal request is ambiguous; need clarification on which image (filename/page/section) should be removed.",
+    "User request 'remove this types of images from the websites' is ambiguous; need clarification on which images/types, and which pages/sections they should be removed from."
   ],
   "isFixRequest": true,
   "existing_features": [
@@ -241,6 +242,14 @@
         "REQ-34"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-remove-the-static-asset-file-for-download-webp-from-the-frontend-public-static-assets-only-if-it-exists-and-is-not-referenced-anywhere-after-req-35-so-it-is-not-shipped-with-the-site-build",
+      "title": "Remove the static asset file for \"download.webp\" from the frontend public/static assets (only if it exists and is not referenced anywhere after REQ-35), so it is not shipped with the site build.",
+      "reqIds": [
+        "REQ-36"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -349,6 +358,14 @@
       "summary": "Remove the specified image from the website (requires identifying which image/page).",
       "reqIds": [],
       "status": "blocked"
+    },
+    {
+      "id": "AR-26",
+      "summary": "Remove the uploaded image file \"download.webp\" from the BM ENTERPRISES website so it is no longer displayed anywhere, including any page sections, galleries, or featured images.",
+      "reqIds": [
+        "REQ-35"
+      ],
+      "status": "pending"
     }
   ],
   "gameProjectType": "none",

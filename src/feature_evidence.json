@@ -2,26 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-remove-the-uploaded-image-whatsapp-image-2026-02-16-at-8-58-51-pm-1-3-from-the-website-so-it-is-no-longer-displayed-anywhere-including-the-major-projects-page-ongoing-projects-gallery-section-and-ensure-no-broken-image-references-remain",
-      "featureTitle": "Remove the uploaded image \"WhatsApp Image 2026-02-16 at 8.58.51 PM (1)-3\" from the website so it is no longer displayed anywhere (including the Major Projects page 'Ongoing Projects (Gallery)' section), and ensure no broken image references remain.",
-      "files": [
-        "frontend/src/pages/MajorProjectsPage.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-33"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-remove-the-static-asset-file-for-the-uploaded-image-from-the-frontend-public-assets-if-it-exists-and-is-not-referenced-elsewhere-after-req-33-so-it-is-not-shipped-with-the-site-build",
-      "featureTitle": "Remove the static asset file for the uploaded image from the frontend public assets if it exists and is not referenced elsewhere after REQ-33 (so it is not shipped with the site build).",
+      "featureId": "feature-remove-the-static-asset-file-for-download-webp-from-the-frontend-public-static-assets-only-if-it-exists-and-is-not-referenced-anywhere-after-req-35-so-it-is-not-shipped-with-the-site-build",
+      "featureTitle": "Remove the static asset file for \"download.webp\" from the frontend public/static assets (only if it exists and is not referenced anywhere after REQ-35), so it is not shipped with the site build.",
       "files": [],
       "components": [
         "core-infrastructure@1.0.2",
@@ -31,7 +13,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-34"
+        "REQ-36"
       ],
       "confidence": "high"
     }

@@ -1,65 +1,54 @@
 {
   "kind": "build_request",
-  "title": "Remove uploaded WhatsApp image from site galleries",
+  "title": "Remove uploaded download.webp image from the website",
   "projectName": "BM ENTERPRISES",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-33",
-      "text": "Remove the uploaded image \"WhatsApp Image 2026-02-16 at 8.58.51 PM (1)-3\" from the website so it is no longer displayed anywhere (including the Major Projects page 'Ongoing Projects (Gallery)' section), and ensure no broken image references remain.",
+      "id": "REQ-35",
+      "text": "Remove the uploaded image file \"download.webp\" from the BM ENTERPRISES website so it is no longer displayed anywhere, including any page sections, galleries, or featured images.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-1"
         ],
         "quotes": [
-          "remove this image from the website"
+          "remove this types of images from the websites"
         ]
       },
       "acceptanceCriteria": [
-        "The image \"WhatsApp Image 2026-02-16 at 8.58.51 PM (1)-3\" no longer appears on any page, including the Major Projects page ongoing projects gallery.",
-        "The Major Projects page (route \"/projects\") loads without any broken images in the ongoing projects gallery grid.",
-        "No remaining code references exist to either \"/assets/WhatsApp Image 2026-02-16 at 8.58.51 PM (1)-3.jpeg\" or the uploaded filename \"WhatsApp Image 2026-02-16 at 8.58.51 PM (1)-3.jpg\" (account for either extension if present in assets)."
+        "No UI page renders or references \"download.webp\".",
+        "If \"download.webp\" was included in any images array (e.g., gallery grids), it is removed from that list.",
+        "There are no broken image links caused by the removal."
       ]
     },
     {
-      "id": "REQ-34",
-      "text": "Remove the static asset file for the uploaded image from the frontend public assets if it exists and is not referenced elsewhere after REQ-33 (so it is not shipped with the site build).",
+      "id": "REQ-36",
+      "text": "Remove the static asset file for \"download.webp\" from the frontend public/static assets (only if it exists and is not referenced anywhere after REQ-35), so it is not shipped with the site build.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-1"
         ],
         "quotes": [
-          "remove this image from the website"
+          "remove this types of images from the websites"
         ]
       },
       "acceptanceCriteria": [
-        "The uploaded image file (\"WhatsApp Image 2026-02-16 at 8.58.51 PM (1)-3.jpg\") is removed from frontend public assets (or any assets folder where it was placed) if present.",
-        "The production build succeeds and the site has no missing-asset 404s related to the removed image."
+        "The built site does not include the \"download.webp\" asset file.",
+        "The site builds successfully with no missing-asset errors."
       ]
     }
   ],
   "constraints": [
-    "Do not edit files under frontend/src/components/ui (read-only).",
-    "Keep changes limited to removing this specific image and any now-unused asset file(s)."
+    "Do not edit files under frontend/src/components/ui or any other frontend immutable paths listed in SYSTEM_CONTEXT."
   ],
   "nonGoals": [
-    "Do not change other gallery images or page layouts beyond what is necessary to remove the specified image.",
-    "Do not add new images or replace the removed image with a new one."
+    "Do not remove other images unless they are the specific \"download.webp\" file.",
+    "No backend/canister changes are required for this request."
   ],
   "imageRequirements": {
     "required": [],
     "edits": []
-  },
-  "userProfileUpdate": {
-    "goalsToAdd": [],
-    "goalsToRemove": [],
-    "preferencesToAdd": [],
-    "preferencesToRemove": [],
-    "miscToAdd": [],
-    "miscToRemove": [],
-    "fieldsToSet": {},
-    "fieldsToDelete": []
   }
 }
