@@ -1,0 +1,69 @@
+{
+  "kind": "build_request",
+  "title": "Add a featured image to the Major Projects (Our Projects) page",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-24",
+      "text": "Add a prominent featured image section to the Major Projects page (route \"/projects\"), positioned between the page title/intro block and the projects grid, using the same responsive styling pattern used on Services and Major Clients pages (full width, max-w-5xl, centered, rounded corners, shadow, object-cover).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "add image in : our projects"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Visiting \"/projects\" shows a featured image between the heading/intro text and the list of ProjectCard items.",
+        "The image uses consistent styling with other page hero images (rounded-lg, shadow-lg, object-cover, centered with max width).",
+        "The image has an English alt text that describes the visual content.",
+        "The rest of the Major Projects content and layout (project list/grid) remains intact and renders correctly."
+      ]
+    },
+    {
+      "id": "REQ-25",
+      "text": "Add the new Major Projects featured image as a static asset under the public assets path so it can be referenced by the Major Projects page via an absolute path (e.g., \"/assets/generated/...\"), without routing the image through the backend.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "add image in : our projects"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A new image file exists in the frontend public assets (under the generated assets folder) matching the filename specified in Image Requirements.",
+        "MajorProjectsPage references the image via a public path (e.g., \"/assets/generated/<filename>\") and the image loads in the browser in production builds."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files under frontend/src/components/ui (read-only).",
+    "Do not modify frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, or frontend/src/main.tsx (immutable paths).",
+    "Backend remains single-actor; no backend changes are required for this request."
+  ],
+  "nonGoals": [
+    "Do not change the existing list of projects or ProjectCard content/fields.",
+    "Do not add new routes or navigation items; only update the existing Major Projects page content.",
+    "Do not add lightbox/modal behavior to the featured image (only a static display)."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Wide hero photo of an active electrical worksite with electricians in PPE, visible switchgear/cable trays, industrial/commercial setting, warm neutral tones, realistic photography style (major-projects-hero.dim_1600x900.jpg)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

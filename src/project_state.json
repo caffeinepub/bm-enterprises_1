@@ -1,0 +1,267 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 19,
+  "summary": "Website project for electrical contracting company BM ENTERPRISES, including core business pages and enquiry/contact functionality.",
+  "architectural_notes": [
+    "Replace existing contact placeholders with real BM ENTERPRISES contact details: Phone 9561549685 / 7875400932; Email bmenterprises1212@gmail.com; Office A-60, Opp, Siverl Oak, Libherr Chowk, Shendra MIDC, Chh. Sambhajinagar 431154."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Wide hero photo of an active electrical worksite with electricians in PPE, visible switchgear/cable trays, industrial/commercial setting, warm neutral tones, realistic photography style (major-projects-hero.dim_1600x900.jpg)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-complete-multi-page-company-website-for-the-electrical-contracting-business-named-bm-enterprises-with-top-navigation-and-routes-for-trusted-electrical-contractors-home-landing-our-services-quality-and-safety-policy-major-clients-major-projects-gallery-and-enquiry",
+      "title": "Create a complete multi-page company website for the electrical contracting business named \"BM ENTERPRISES\" with top navigation and routes for: Trusted Electrical Contractors (home/landing), Our Services, Quality and Safety Policy, Major Clients, Major Projects, Gallery, and Enquiry.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-coherent-professional-visual-theme-for-bm-enterprises-suitable-for-an-electrical-contracting-company-color-palette-typography-spacing-and-component-styling-and-apply-it-consistently-across-all-pages-do-not-use-a-blue-purple-theme",
+      "title": "Implement a coherent, professional visual theme for BM ENTERPRISES suitable for an electrical contracting company (color palette, typography, spacing, and component styling) and apply it consistently across all pages. Do not use a blue/purple theme.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-trusted-electrical-contractors-landing-page-content-for-bm-enterprises-including-a-hero-section-company-name-tagline-a-short-company-overview-a-highlights-section-e-g-safety-quality-on-time-delivery-and-clear-calls-to-action-leading-to-services-and-enquiry",
+      "title": "Build the \"Trusted Electrical Contractors\" landing page content for BM ENTERPRISES including: a hero section (company name + tagline), a short company overview, a highlights section (e.g., safety, quality, on-time delivery), and clear calls-to-action leading to Services and Enquiry.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-our-services-page-with-a-structured-list-grid-of-electrical-contracting-services-with-short-descriptions-using-reusable-ui-sections-cards",
+      "title": "Build the \"Our Services\" page with a structured list/grid of electrical contracting services with short descriptions, using reusable UI sections/cards.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-quality-and-safety-policy-page-with-well-formatted-policy-content-and-clear-section-headings-e-g-quality-commitment-safety-commitment-compliance-training",
+      "title": "Build the \"Quality and Safety Policy\" page with well-formatted policy content and clear section headings (e.g., Quality Commitment, Safety Commitment, Compliance/Training).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-major-clients-page-displaying-a-list-grid-of-client-names-initially-static-with-a-clean-presentation-suitable-for-future-updates",
+      "title": "Build the \"Major Clients\" page displaying a list/grid of client names (initially static) with a clean presentation suitable for future updates.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-major-projects-page-with-a-list-of-projects-initially-static-showing-at-minimum-project-name-title-location-if-provided-later-and-a-short-description-scope-field-provide-a-layout-that-supports-multiple-projects",
+      "title": "Build the \"Major Projects\" page with a list of projects (initially static) showing at minimum: project name/title, location (if provided later), and a short description/scope field. Provide a layout that supports multiple projects.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-gallery-page-displaying-a-responsive-grid-of-images-sourced-from-static-assets-with-a-simple-lightbox-modal-view-when-clicking-an-image",
+      "title": "Build the \"Gallery\" page displaying a responsive grid of images sourced from static assets, with a simple lightbox/modal view when clicking an image.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-an-enquiry-page-section-with-a-contact-enquiry-form-for-bm-enterprises-that-collects-at-least-name-phone-email-at-least-one-required-subject-and-message-validate-inputs-and-show-success-error-states",
+      "title": "Implement an \"Enquiry\" page/section with a contact/enquiry form for BM ENTERPRISES that collects at least: name, phone/email (at least one required), subject, and message; validate inputs; and show success/error states.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-wire-the-enquiry-form-submission-to-the-backend-using-the-existing-actor-setup-and-react-query-mutation-patterns-and-display-the-returned-acknowledgement-e-g-enquiry-reference-to-the-user-upon-success",
+      "title": "Wire the Enquiry form submission to the backend using the existing actor setup and React Query mutation patterns, and display the returned acknowledgement (e.g., enquiry reference) to the user upon success.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-site-footer-shown-across-all-pages-containing-bm-enterprises-name-basic-contact-placeholders-phone-email-address-placeholders-in-english-and-quick-links-to-the-main-pages",
+      "title": "Add a site footer shown across all pages containing: BM ENTERPRISES name, basic contact placeholders (phone/email/address placeholders in English), and quick links to the main pages.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-uploaded-company-logo-image-bmlogo-jpg-to-the-frontend-static-assets-and-update-the-site-branding-to-use-it-in-the-global-header-and-footer-in-place-of-the-current-generated-logo-image",
+      "title": "Add the uploaded company logo image (BMLOGO.jpg) to the frontend static assets and update the site branding to use it in the global header and footer in place of the current generated logo image.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-site-footer-contact-details-to-use-the-provided-bm-enterprises-phone-numbers-email-address-and-office-address-replace-the-current-placeholder-contact-information",
+      "title": "Update the site footer contact details to use the provided BM ENTERPRISES phone numbers, email address, and office address (replace the current placeholder contact information).",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-provided-bm-enterprises-contact-information-to-the-enquiry-contact-us-page-as-a-clearly-labeled-direct-contact-section-near-the-top-of-the-page-in-english-using-the-same-phone-numbers-email-and-office-address-as-the-footer",
+      "title": "Add the provided BM ENTERPRISES contact information to the Enquiry (Contact Us) page as a clearly labeled 'Direct Contact' section near the top of the page, in English, using the same phone numbers, email, and office address as the footer.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-uploaded-image-file-trusted-electrical-contactor-jpeg-to-the-frontend-static-assets-and-display-it-on-the-trusted-electrical-contractors-home-landing-page-route-as-a-prominent-visual-element-e-g-within-the-hero-area-or-as-a-dedicated-visual-section-near-the-top",
+      "title": "Add the uploaded image file \"trusted electrical contactor.jpeg\" to the frontend static assets and display it on the \"Trusted Electrical Contractors\" (home/landing) page (route \"/\") as a prominent visual element (e.g., within the hero area or as a dedicated visual section near the top).",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-uploaded-image-file-our-services-jpeg-to-the-frontend-static-assets-and-display-it-prominently-on-the-our-services-page-route-services-positioned-near-the-top-of-the-page-e-g-between-the-page-intro-text-and-the-services-grid-with-responsive-sizing-and-proper-alt-text-in-english",
+      "title": "Add the uploaded image file \"our services.jpeg\" to the frontend static assets and display it prominently on the \"Our Services\" page (route \"/services\"), positioned near the top of the page (e.g., between the page intro text and the services grid) with responsive sizing and proper alt text in English.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-a-new-static-image-asset-for-the-quality-and-safety-policy-page-and-add-it-to-the-frontend-public-assets-so-it-can-be-referenced-directly-by-the-page",
+      "title": "Generate a new static image asset for the Quality and Safety Policy page and add it to the frontend public assets so it can be referenced directly by the page.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-quality-and-safety-policy-page-route-quality-safety-to-display-the-new-image-prominently-near-the-top-of-the-page-between-the-page-title-intro-block-and-the-policy-cards-with-responsive-sizing-rounded-corners-and-a-shadow-consistent-with-the-services-page-image-styling-and-with-appropriate-english-alt-text",
+      "title": "Update the Quality and Safety Policy page (route \"/quality-safety\") to display the new image prominently near the top of the page (between the page title/intro block and the policy cards), with responsive sizing, rounded corners, and a shadow consistent with the Services page image styling, and with appropriate English alt text.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-quality-and-safety-policy-page-route-quality-safety-to-display-the-uploaded-image-safety-policy-jpeg-as-the-prominent-hero-image-near-the-top-of-the-page-replacing-the-currently-referenced-generated-image-keeping-the-same-responsive-styling-rounded-corners-shadow-object-cover-and-using-appropriate-english-alt-text",
+      "title": "Update the Quality and Safety Policy page (route \"/quality-safety\") to display the uploaded image \"safety policy.jpeg\" as the prominent hero image near the top of the page (replacing the currently referenced generated image), keeping the same responsive styling (rounded corners, shadow, object-cover) and using appropriate English alt text.",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-major-clients-page-route-clients-to-display-the-uploaded-image-major-clients-jpeg-prominently-near-the-top-of-the-page-positioned-between-the-page-title-intro-block-and-the-clients-grid-with-responsive-sizing-and-appropriate-english-alt-text",
+      "title": "Update the Major Clients page (route \"/clients\") to display the uploaded image \"major clients.jpeg\" prominently near the top of the page, positioned between the page title/intro block and the clients grid, with responsive sizing and appropriate English alt text.",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-prominent-featured-image-section-to-the-major-projects-page-route-projects-positioned-between-the-page-title-intro-block-and-the-projects-grid-using-the-same-responsive-styling-pattern-used-on-services-and-major-clients-pages-full-width-max-w-5xl-centered-rounded-corners-shadow-object-cover",
+      "title": "Add a prominent featured image section to the Major Projects page (route \"/projects\"), positioned between the page title/intro block and the projects grid, using the same responsive styling pattern used on Services and Major Clients pages (full width, max-w-5xl, centered, rounded corners, shadow, object-cover).",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-new-major-projects-featured-image-as-a-static-asset-under-the-public-assets-path-so-it-can-be-referenced-by-the-major-projects-page-via-an-absolute-path-e-g-assets-generated-without-routing-the-image-through-the-backend",
+      "title": "Add the new Major Projects featured image as a static asset under the public assets path so it can be referenced by the Major Projects page via an absolute path (e.g., \"/assets/generated/...\"), without routing the image through the backend.",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a complete professional website for BM ENTERPRISES with pages: Trusted Electrical Contractors, Our Services, Quality and Safety Policy, Major Clients, Major Projects, Gallery, and an Enquiry section.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Add backend support to store enquiries submitted from the Enquiry form, including timestamp and the submitted fields, and expose a canister method to create an enquiry and return an acknowledgement (e.g., an enquiry ID).",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Add the company logo to the website branding (e.g., header/nav and other appropriate locations) using the provided BM ENTERPRISES logo asset.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Update the site contact information (footer and any relevant contact/enquiry sections) to use the provided phone numbers, email address, and office address for BM ENTERPRISES.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Add an image/visual section to the \"Trusted Electrical Contractors\" (home/landing) page.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Add an image/visual section to the \"Our Services\" page.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Add an image/visual section to the \"Quality and Safety Policy\" page (route \"/quality-safety\"), positioned near the top with responsive sizing and appropriate alt text.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Add the uploaded image files (\"safety policy.jpeg\", \"safety policy-1.jpeg\", \"safety policy-2.jpeg\") to the frontend static assets so they can be referenced by the app.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Add an image/visual section to the \"Major Clients\" page (route \"/clients\"), positioned near the top with responsive sizing and appropriate alt text.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Add the uploaded image file \"major clients.jpeg\" to the frontend static assets under the existing public assets path so it can be referenced at runtime (e.g., via \"/assets/major clients.jpeg\").",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Add an image/visual section to the \"Major Projects\" (Our Projects) page, positioned near the top with responsive sizing and appropriate English alt text.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "BM ENTERPRISES",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

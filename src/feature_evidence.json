@@ -1,0 +1,41 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-a-prominent-featured-image-section-to-the-major-projects-page-route-projects-positioned-between-the-page-title-intro-block-and-the-projects-grid-using-the-same-responsive-styling-pattern-used-on-services-and-major-clients-pages-full-width-max-w-5xl-centered-rounded-corners-shadow-object-cover",
+      "featureTitle": "Add a prominent featured image section to the Major Projects page (route \"/projects\"), positioned between the page title/intro block and the projects grid, using the same responsive styling pattern used on Services and Major Clients pages (full width, max-w-5xl, centered, rounded corners, shadow, object-cover).",
+      "files": [
+        "frontend/src/pages/MajorProjectsPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-24"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-the-new-major-projects-featured-image-as-a-static-asset-under-the-public-assets-path-so-it-can-be-referenced-by-the-major-projects-page-via-an-absolute-path-e-g-assets-generated-without-routing-the-image-through-the-backend",
+      "featureTitle": "Add the new Major Projects featured image as a static asset under the public assets path so it can be referenced by the Major Projects page via an absolute path (e.g., \"/assets/generated/...\"), without routing the image through the backend.",
+      "files": [
+        "frontend/src/pages/MajorProjectsPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-25"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Featured hero image for Major Projects page",
+  "requirements": [
+    {
+      "id": "REQ-24",
+      "summary": "Add a featured image section to the Major Projects (/projects) page between the intro block and projects grid, matching existing hero image styling.",
+      "acceptanceCriteria": [
+        "Visiting \"/projects\" shows a featured image between the heading/intro text and the list of ProjectCard items.",
+        "The image uses consistent styling with other page hero images (rounded-lg, shadow-lg, object-cover, centered with max width).",
+        "The image has an English alt text that describes the visual content.",
+        "The rest of the Major Projects content and layout (project list/grid) remains intact and renders correctly."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/MajorProjectsPage.tsx",
+          "operation": "modify",
+          "description": "Insert a new featured image block between the existing title/intro section and the projects grid, using the same responsive styling pattern used on Services and Major Clients pages (w-full, max-w-5xl, mx-auto, rounded-lg, shadow-lg, object-cover). Reference the new static asset via an absolute public path and include a descriptive English alt text."
+        }
+      ]
+    },
+    {
+      "id": "REQ-25",
+      "summary": "Add the new Major Projects featured image as a static public asset under the generated assets folder and reference it via an absolute path.",
+      "acceptanceCriteria": [
+        "A new image file exists in the frontend public assets (under the generated assets folder) matching the filename specified in Image Requirements.",
+        "MajorProjectsPage references the image via a public path (e.g., \"/assets/generated/<filename>\") and the image loads in the browser in production builds."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/major-projects-hero.dim_1600x900.jpg",
+          "operation": "create",
+          "description": "Add the required hero image asset (wide hero photo of an active electrical worksite with electricians in PPE, visible switchgear/cable trays, industrial/commercial setting, warm neutral tones, realistic photography style) as a static file so it can be served directly from the public assets folder."
+        },
+        {
+          "path": "frontend/src/pages/MajorProjectsPage.tsx",
+          "operation": "modify",
+          "description": "Update/ensure the featured image uses the absolute public path \"/assets/generated/major-projects-hero.dim_1600x900.jpg\" (not routed through the backend) and confirm it renders correctly in production builds."
+        }
+      ]
+    }
+  ]
+}
