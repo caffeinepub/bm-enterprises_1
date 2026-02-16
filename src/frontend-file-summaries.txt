@@ -8,12 +8,13 @@
   "frontend/src/components/ServiceCard.tsx": "Reusable card component for displaying individual services with icon, title, and description.",
   "frontend/src/pages/QualitySafetyPolicyPage.tsx": "Quality and safety policy page with a hero image section displaying the uploaded BM Enterprises safety policy image showing electrical safety team conducting site inspection, followed by structured sections covering quality commitment, safety commitment, compliance, and training.",
   "frontend/src/pages/MajorClientsPage.tsx": "Major clients page displaying the \"major clients.jpeg\" image prominently between the intro text and the clients grid, followed by a grid of client names with building icons in card format and a closing \"And many more...\" text.",
-  "frontend/src/pages/MajorProjectsPage.tsx": "Major projects page displaying a featured hero image between the intro text and the projects grid, followed by detailed project cards with titles, locations, and comprehensive descriptions.",
+  "frontend/src/pages/MajorProjectsPage.tsx": "Major projects page displaying the major project hero image, project cards grid, and an \"Ongoing Projects (Gallery)\" section with 5 uploaded images (removed the WhatsApp Image (1)-3 entry) showing electrical installations using the shared ImageGalleryGrid component.",
   "frontend/src/components/ProjectCard.tsx": "Reusable card component for displaying project information including title, location with map pin icon, and description.",
-  "frontend/src/pages/GalleryPage.tsx": "Gallery page with responsive image grid and click-to-preview lightbox functionality using Dialog component.",
+  "frontend/src/pages/GalleryPage.tsx": "Gallery page refactored to use the shared ImageGalleryGrid component, displaying the existing generated gallery images with responsive grid layout and modal preview.",
   "frontend/src/pages/EnquiryPage.tsx": "Contact enquiry page with a Direct Contact section displaying BM ENTERPRISES contact details (phone, email, office address) at the top, followed by a validated form collecting name, phone, email, subject, and message with success/error state handling.",
   "frontend/src/hooks/useSubmitEnquiry.ts": "React Query mutation hook for submitting enquiries to the backend actor and invalidating related queries on success.",
   "frontend/src/lib/validation/enquiryValidation.ts": "Client-side validation helper for enquiry form ensuring required fields, email format, and contact information requirements.",
   "frontend/src/index.css": "Global styles with OKLCH color system using amber/orange industrial theme (hue 45) for primary colors in both light and dark modes.",
-  "frontend/tailwind.config.js": "Tailwind configuration with extended theme including Inter font family and custom design tokens matching the industrial electrical theme."
+  "frontend/tailwind.config.js": "Tailwind configuration with extended theme including Inter font family and custom design tokens matching the industrial electrical theme.",
+  "frontend/src/components/ImageGalleryGrid.tsx": "Reusable responsive image gallery grid component with click-to-preview lightbox functionality using Dialog component for modal image viewing."
 }

@@ -1,4 +1,5 @@
 import ProjectCard from '../components/ProjectCard';
+import ImageGalleryGrid from '../components/ImageGalleryGrid';
 
 export default function MajorProjectsPage() {
   const projects = [
@@ -34,6 +35,29 @@ export default function MajorProjectsPage() {
     },
   ];
 
+  const ongoingProjectsImages = [
+    {
+      src: '/assets/WhatsApp Image 2026-02-16 at 8.58.51 PM (1).jpeg',
+      alt: 'Electrical busbar installation with color-coded phase conductors showing blue, yellow, and red phases',
+    },
+    {
+      src: '/assets/WhatsApp Image 2026-02-16 at 8.58.52 PM.jpeg',
+      alt: 'Industrial electrical control room with rows of control panels and cable management systems',
+    },
+    {
+      src: '/assets/WhatsApp Image 2026-02-16 at 8.58.51 PM (1)-1.jpeg',
+      alt: 'Three-phase busbar system with organized conductor arrangement and mounting hardware',
+    },
+    {
+      src: '/assets/WhatsApp Image 2026-02-16 at 8.58.51 PM (1)-2.jpeg',
+      alt: 'Close-up view of electrical busbar connections with phase separation insulators',
+    },
+    {
+      src: '/assets/image.png',
+      alt: 'Industrial chimney with blue and white striped pattern and safety ladder installation',
+    },
+  ];
+
   return (
     <div className="py-16">
       <div className="container">
@@ -46,13 +70,13 @@ export default function MajorProjectsPage() {
 
         <div className="mb-12">
           <img
-            src="/assets/generated/major-projects-hero.dim_1600x900.jpg"
-            alt="Active electrical worksite with electricians in safety gear working on industrial switchgear and cable installations"
+            src="/assets/IMG_20260216_183152.jpg major project.jpeg"
+            alt="Major projects portfolio document showcasing completed electrical installations for Hyundai Motor India, NMDC Limited, and ACG Capsules"
             className="w-full max-w-5xl mx-auto rounded-lg shadow-lg object-cover"
           />
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-2">
+        <div className="grid gap-6 lg:grid-cols-2 mb-16">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}
@@ -62,6 +86,15 @@ export default function MajorProjectsPage() {
             />
           ))}
         </div>
+
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <h2 className="text-3xl font-bold tracking-tight mb-4">Ongoing Projects (Gallery)</h2>
+          <p className="text-lg text-muted-foreground">
+            Take a look at our current electrical installations in progress, showcasing our technical expertise and attention to detail.
+          </p>
+        </div>
+
+        <ImageGalleryGrid images={ongoingProjectsImages} />
       </div>
     </div>
   );

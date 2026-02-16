@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-add-a-prominent-featured-image-section-to-the-major-projects-page-route-projects-positioned-between-the-page-title-intro-block-and-the-projects-grid-using-the-same-responsive-styling-pattern-used-on-services-and-major-clients-pages-full-width-max-w-5xl-centered-rounded-corners-shadow-object-cover",
-      "featureTitle": "Add a prominent featured image section to the Major Projects page (route \"/projects\"), positioned between the page title/intro block and the projects grid, using the same responsive styling pattern used on Services and Major Clients pages (full width, max-w-5xl, centered, rounded corners, shadow, object-cover).",
+      "featureId": "feature-remove-the-uploaded-image-whatsapp-image-2026-02-16-at-8-58-51-pm-1-3-from-the-website-so-it-is-no-longer-displayed-anywhere-including-the-major-projects-page-ongoing-projects-gallery-section-and-ensure-no-broken-image-references-remain",
+      "featureTitle": "Remove the uploaded image \"WhatsApp Image 2026-02-16 at 8.58.51 PM (1)-3\" from the website so it is no longer displayed anywhere (including the Major Projects page 'Ongoing Projects (Gallery)' section), and ensure no broken image references remain.",
       "files": [
         "frontend/src/pages/MajorProjectsPage.tsx"
       ],
@@ -15,16 +15,14 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-24"
+        "REQ-33"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-add-the-new-major-projects-featured-image-as-a-static-asset-under-the-public-assets-path-so-it-can-be-referenced-by-the-major-projects-page-via-an-absolute-path-e-g-assets-generated-without-routing-the-image-through-the-backend",
-      "featureTitle": "Add the new Major Projects featured image as a static asset under the public assets path so it can be referenced by the Major Projects page via an absolute path (e.g., \"/assets/generated/...\"), without routing the image through the backend.",
-      "files": [
-        "frontend/src/pages/MajorProjectsPage.tsx"
-      ],
+      "featureId": "feature-remove-the-static-asset-file-for-the-uploaded-image-from-the-frontend-public-assets-if-it-exists-and-is-not-referenced-elsewhere-after-req-33-so-it-is-not-shipped-with-the-site-build",
+      "featureTitle": "Remove the static asset file for the uploaded image from the frontend public assets if it exists and is not referenced elsewhere after REQ-33 (so it is not shipped with the site build).",
+      "files": [],
       "components": [
         "core-infrastructure@1.0.2",
         "shadcn-ui@1.0.0",
@@ -33,7 +31,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-25"
+        "REQ-34"
       ],
       "confidence": "high"
     }

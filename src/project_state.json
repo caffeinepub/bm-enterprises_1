@@ -1,13 +1,14 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 19,
-  "summary": "Website project for electrical contracting company BM ENTERPRISES, including core business pages and enquiry/contact functionality.",
+  "projectStateVersion": 27,
+  "summary": "Website project for electrical contracting company BM ENTERPRISES, including core business pages and enquiry/contact functionality, with an additional \"Ongoing Projects\" page to be added in the top navigation below \"Gallery\".",
   "architectural_notes": [
     "Replace existing contact placeholders with real BM ENTERPRISES contact details: Phone 9561549685 / 7875400932; Email bmenterprises1212@gmail.com; Office A-60, Opp, Siverl Oak, Libherr Chowk, Shendra MIDC, Chh. Sambhajinagar 431154."
   ],
-  "known_issues": [],
-  "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Wide hero photo of an active electrical worksite with electricians in PPE, visible switchgear/cable trays, industrial/commercial setting, warm neutral tones, realistic photography style (major-projects-hero.dim_1600x900.jpg)",
+  "known_issues": [
+    "Image removal request is ambiguous; need clarification on which image (filename/page/section) should be removed."
+  ],
+  "isFixRequest": true,
   "existing_features": [
     {
       "id": "feature-create-a-complete-multi-page-company-website-for-the-electrical-contracting-business-named-bm-enterprises-with-top-navigation-and-routes-for-trusted-electrical-contractors-home-landing-our-services-quality-and-safety-policy-major-clients-major-projects-gallery-and-enquiry",
@@ -184,6 +185,62 @@
         "REQ-25"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-the-major-projects-page-route-projects-featured-image-to-use-the-uploaded-image-img-20260216-183152-jpg-major-project-jpeg-instead-of-the-currently-referenced-generated-hero-image-keeping-the-same-responsive-styling-full-width-max-w-5xl-centered-rounded-corners-shadow-object-cover-and-using-appropriate-english-alt-text",
+      "title": "Update the Major Projects page (route \"/projects\") featured image to use the uploaded image \"IMG_20260216_183152.jpg major project.jpeg\" instead of the currently referenced generated hero image, keeping the same responsive styling (full width, max-w-5xl centered, rounded corners, shadow, object-cover) and using appropriate English alt text.",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-new-frontend-page-named-ongoing-projects-with-a-new-route-e-g-ongoing-projects-and-implement-the-page-component-under-frontend-src-pages-e-g-ongoingprojectspage-tsx-the-page-must-include-an-h1-title-ongoing-projects-and-a-short-english-intro-paragraph-styled-consistently-with-existing-pages-container-centered-header-block-spacing",
+      "title": "Create a new frontend page named \"Ongoing Projects\" with a new route (e.g., \"/ongoing-projects\") and implement the page component under frontend/src/pages (e.g., OngoingProjectsPage.tsx). The page must include an H1 title \"Ongoing Projects\" and a short English intro paragraph, styled consistently with existing pages (container, centered header block, spacing).",
+      "reqIds": [
+        "REQ-28"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-register-the-new-ongoing-projects-page-in-the-tanstack-router-route-tree-in-frontend-src-app-tsx-so-it-is-reachable-via-the-chosen-path",
+      "title": "Register the new \"Ongoing Projects\" page in the TanStack Router route tree in frontend/src/App.tsx so it is reachable via the chosen path.",
+      "reqIds": [
+        "REQ-29"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-main-site-header-navigation-frontend-src-components-siteheader-tsx-to-include-a-new-nav-item-labeled-ongoing-projects-positioned-directly-below-gallery-i-e-after-the-gallery-link-and-before-enquiry-in-both-desktop-and-mobile-navigation",
+      "title": "Update the main site header navigation (frontend/src/components/SiteHeader.tsx) to include a new nav item labeled \"Ongoing Projects\" positioned directly below \"Gallery\" (i.e., after the Gallery link and before Enquiry) in both desktop and mobile navigation.",
+      "reqIds": [
+        "REQ-30"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-ongoing-projects-page-to-include-an-ongoing-projects-gallery-section-that-displays-the-6-uploaded-images-in-a-responsive-grid-with-a-click-to-preview-lightbox-modal-interaction-consistent-with-the-existing-gallery-page-behavior",
+      "title": "Update the Ongoing Projects page to include an \"Ongoing Projects (Gallery)\" section that displays the 6 uploaded images in a responsive grid with a click-to-preview lightbox/modal interaction consistent with the existing Gallery page behavior.",
+      "reqIds": [
+        "REQ-32"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-uploaded-image-whatsapp-image-2026-02-16-at-8-58-51-pm-1-3-from-the-website-so-it-is-no-longer-displayed-anywhere-including-the-major-projects-page-ongoing-projects-gallery-section-and-ensure-no-broken-image-references-remain",
+      "title": "Remove the uploaded image \"WhatsApp Image 2026-02-16 at 8.58.51 PM (1)-3\" from the website so it is no longer displayed anywhere (including the Major Projects page 'Ongoing Projects (Gallery)' section), and ensure no broken image references remain.",
+      "reqIds": [
+        "REQ-33"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-static-asset-file-for-the-uploaded-image-from-the-frontend-public-assets-if-it-exists-and-is-not-referenced-elsewhere-after-req-33-so-it-is-not-shipped-with-the-site-build",
+      "title": "Remove the static asset file for the uploaded image from the frontend public assets if it exists and is not referenced elsewhere after REQ-33 (so it is not shipped with the site build).",
+      "reqIds": [
+        "REQ-34"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -258,6 +315,40 @@
       "summary": "Add an image/visual section to the \"Major Projects\" (Our Projects) page, positioned near the top with responsive sizing and appropriate English alt text.",
       "reqIds": [],
       "status": "pending"
+    },
+    {
+      "id": "AR-21",
+      "summary": "Add the uploaded image file \"IMG_20260216_183152.jpg major project.jpeg\" to the frontend static assets (under the existing public assets path) so it can be referenced at runtime via an absolute path.",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-22",
+      "summary": "Create a new website page named \"Ongoing Projects\" and add it to the main navigation positioned below \"Gallery\".",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Add images to the \"Ongoing Projects\" page in a Gallery-style section/grid (Ongoing Projects Gallery).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-24",
+      "summary": "Add the 6 newly uploaded images as static assets in the frontend so they can be referenced by the Ongoing Projects page at runtime.",
+      "reqIds": [
+        "REQ-31"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-25",
+      "summary": "Remove the specified image from the website (requires identifying which image/page).",
+      "reqIds": [],
+      "status": "blocked"
     }
   ],
   "gameProjectType": "none",
