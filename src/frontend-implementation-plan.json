@@ -1,71 +1,27 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Remove download.webp from BM ENTERPRISES frontend",
+  "title": "Faint background logo behind About section on Trusted Electrical Contractors page",
   "requirements": [
     {
-      "id": "REQ-35",
-      "summary": "Remove any UI references to the uploaded image download.webp so it is no longer displayed anywhere.",
+      "id": "REQ-53",
+      "summary": "Add BMLOGO-1.jpg as a faint background behind the About BM ENTERPRISES section on the Trusted Electrical Contractors landing page while preserving text readability.",
       "acceptanceCriteria": [
-        "No UI page renders or references \"download.webp\".",
-        "If \"download.webp\" was included in any images array (e.g., gallery grids), it is removed from that list.",
-        "There are no broken image links caused by the removal."
+        "The \"About BM ENTERPRISES\" section on the Trusted Electrical Contractors page displays BMLOGO-1.jpg as a background image with low opacity (faint effect).",
+        "The background image is positioned behind the section content (does not shift layout or overlap text/buttons).",
+        "Text in the section remains clearly readable on all screen sizes (desktop and mobile).",
+        "The background image is loaded as a static frontend asset (not routed through the backend)."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/pages/GalleryPage.tsx",
-          "operation": "modify",
-          "description": "Audit the galleryImages list and ensure any entry referencing \"download.webp\" is removed/replaced so the Gallery page never renders it."
-        },
-        {
-          "path": "frontend/src/pages/MajorProjectsPage.tsx",
-          "operation": "modify",
-          "description": "Audit the ongoingProjectsImages array and any other image usage on this page to ensure \"download.webp\" is not referenced anywhere."
+          "path": "frontend/public/assets/BMLOGO-1.jpg",
+          "operation": "create",
+          "description": "Add the uploaded image as a static public asset so it can be referenced directly by the Trusted Electrical Contractors page (no backend involvement)."
         },
         {
           "path": "frontend/src/pages/TrustedElectricalContractorsPage.tsx",
           "operation": "modify",
-          "description": "Audit hero and section imagery (including any inline background-image usage) to ensure \"download.webp\" is not referenced."
-        },
-        {
-          "path": "frontend/src/pages/ServicesPage.tsx",
-          "operation": "modify",
-          "description": "Audit the page hero/supporting image references and ensure \"download.webp\" is not referenced."
-        },
-        {
-          "path": "frontend/src/pages/QualitySafetyPolicyPage.tsx",
-          "operation": "modify",
-          "description": "Audit the page image references and ensure \"download.webp\" is not referenced."
-        },
-        {
-          "path": "frontend/src/pages/MajorClientsPage.tsx",
-          "operation": "modify",
-          "description": "Audit the showcase image reference and ensure \"download.webp\" is not referenced."
-        },
-        {
-          "path": "frontend/src/components/SiteHeader.tsx",
-          "operation": "modify",
-          "description": "Audit header logo/imagery references to ensure \"download.webp\" is not referenced."
-        },
-        {
-          "path": "frontend/src/components/SiteFooter.tsx",
-          "operation": "modify",
-          "description": "Audit footer logo/imagery references to ensure \"download.webp\" is not referenced."
-        }
-      ]
-    },
-    {
-      "id": "REQ-36",
-      "summary": "Delete the static asset file download.webp from frontend public assets so it is not shipped with the build.",
-      "acceptanceCriteria": [
-        "The built site does not include the \"download.webp\" asset file.",
-        "The site builds successfully with no missing-asset errors."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/public/assets/download.webp",
-          "operation": "delete",
-          "description": "Remove the static asset file \"download.webp\" from the frontend public assets after confirming REQ-35 removed all references."
+          "description": "Update the \"Company Overview\" / \"About BM ENTERPRISES\" section to use a relative container with an absolutely-positioned background layer rendering /assets/BMLOGO-1.jpg with low opacity and appropriate positioning/sizing; ensure the content wrapper is above the background (z-index) and remains readable across breakpoints using existing React + Tailwind CSS patterns."
         }
       ]
     }

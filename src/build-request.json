@@ -1,54 +1,49 @@
 {
   "kind": "build_request",
-  "title": "Remove uploaded download.webp image from the website",
+  "title": "Add faint logo background to About section",
   "projectName": "BM ENTERPRISES",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-35",
-      "text": "Remove the uploaded image file \"download.webp\" from the BM ENTERPRISES website so it is no longer displayed anywhere, including any page sections, galleries, or featured images.",
+      "id": "REQ-53",
+      "text": "Add the uploaded image \"BMLOGO-1.jpg\" as a faint (low-opacity) background behind the \"About BM ENTERPRISES\" section on the Trusted Electrical Contractors landing page (frontend/src/pages/TrustedElectricalContractorsPage.tsx), without reducing text readability.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-4"
         ],
         "quotes": [
-          "remove this types of images from the websites"
+          "add this picture in faint :On Background                   About BM ENTERPRISES"
         ]
       },
       "acceptanceCriteria": [
-        "No UI page renders or references \"download.webp\".",
-        "If \"download.webp\" was included in any images array (e.g., gallery grids), it is removed from that list.",
-        "There are no broken image links caused by the removal."
-      ]
-    },
-    {
-      "id": "REQ-36",
-      "text": "Remove the static asset file for \"download.webp\" from the frontend public/static assets (only if it exists and is not referenced anywhere after REQ-35), so it is not shipped with the site build.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "remove this types of images from the websites"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The built site does not include the \"download.webp\" asset file.",
-        "The site builds successfully with no missing-asset errors."
+        "The \"About BM ENTERPRISES\" section on the Trusted Electrical Contractors page displays BMLOGO-1.jpg as a background image with low opacity (faint effect).",
+        "The background image is positioned behind the section content (does not shift layout or overlap text/buttons).",
+        "Text in the section remains clearly readable on all screen sizes (desktop and mobile).",
+        "The background image is loaded as a static frontend asset (not routed through the backend)."
       ]
     }
   ],
   "constraints": [
-    "Do not edit files under frontend/src/components/ui or any other frontend immutable paths listed in SYSTEM_CONTEXT."
+    "Do not modify any files under frontend/src/components/ui (shadcn components are read-only).",
+    "Keep all changes within the existing React + Tailwind CSS patterns used in the project."
   ],
   "nonGoals": [
-    "Do not remove other images unless they are the specific \"download.webp\" file.",
-    "No backend/canister changes are required for this request."
+    "Do not change the existing header logo or footer logo behavior.",
+    "Do not apply the faint background logo to other pages/sections unless explicitly requested."
   ],
   "imageRequirements": {
     "required": [],
     "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
   }
 }

@@ -13,9 +13,12 @@ interface ImageGalleryGridProps {
 export default function ImageGalleryGrid({ images }: ImageGalleryGridProps) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
+  // Filter out any images with empty or undefined src to prevent broken renders
+  const validImages = images.filter(image => image.src && image.src.trim() !== '');
+
   return (
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {images.map((image, index) => (
+      {validImages.map((image, index) => (
         <Dialog key={index}>
           <DialogTrigger asChild>
             <button

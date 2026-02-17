@@ -17,11 +17,26 @@ export interface Enquiry {
   'email' : string,
   'message' : string,
 }
+export interface Feedback {
+  'id' : bigint,
+  'suggestions' : string,
+  'timestampCreated' : Time,
+  'name' : string,
+  'email' : string,
+  'message' : string,
+  'rating' : bigint,
+}
 export type Time = bigint;
 export interface _SERVICE {
   'getAllEnquiries' : ActorMethod<[], Array<Enquiry>>,
+  'getAllFeedback' : ActorMethod<[], Array<Feedback>>,
   'getEnquiry' : ActorMethod<[bigint], Enquiry>,
+  'getFeedback' : ActorMethod<[bigint], Feedback>,
   'submitEnquiry' : ActorMethod<[string, string, string], bigint>,
+  'submitFeedback' : ActorMethod<
+    [string, string, string, bigint, string],
+    bigint
+  >,
 }
 export declare const idlService: IDL.ServiceClass;
 export declare const idlInitArgs: IDL.Type[];

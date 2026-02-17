@@ -89,6 +89,7 @@ export class ExternalBlob {
         return this;
     }
 }
+export type Time = bigint;
 export interface Enquiry {
     id: bigint;
     timestampCreated: Time;
@@ -96,11 +97,22 @@ export interface Enquiry {
     email: string;
     message: string;
 }
-export type Time = bigint;
+export interface Feedback {
+    id: bigint;
+    suggestions: string;
+    timestampCreated: Time;
+    name: string;
+    email: string;
+    message: string;
+    rating: bigint;
+}
 export interface backendInterface {
     getAllEnquiries(): Promise<Array<Enquiry>>;
+    getAllFeedback(): Promise<Array<Feedback>>;
     getEnquiry(id: bigint): Promise<Enquiry>;
+    getFeedback(id: bigint): Promise<Feedback>;
     submitEnquiry(name: string, email: string, message: string): Promise<bigint>;
+    submitFeedback(name: string, email: string, message: string, rating: bigint, suggestions: string): Promise<bigint>;
 }
 export class Backend implements backendInterface {
     constructor(private actor: ActorSubclass<_SERVICE>, private _uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, private _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, private processError?: (error: unknown) => never){}
@@ -118,6 +130,20 @@ export class Backend implements backendInterface {
             return result;
         }
     }
+    async getAllFeedback(): Promise<Array<Feedback>> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.getAllFeedback();
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.getAllFeedback();
+            return result;
+        }
+    }
     async getEnquiry(arg0: bigint): Promise<Enquiry> {
         if (this.processError) {
             try {
@@ -132,6 +158,20 @@ export class Backend implements backendInterface {
             return result;
         }
     }
+    async getFeedback(arg0: bigint): Promise<Feedback> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.getFeedback(arg0);
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.getFeedback(arg0);
+            return result;
+        }
+    }
     async submitEnquiry(arg0: string, arg1: string, arg2: string): Promise<bigint> {
         if (this.processError) {
             try {
@@ -143,6 +183,20 @@ export class Backend implements backendInterface {
             }
         } else {
             const result = await this.actor.submitEnquiry(arg0, arg1, arg2);
+            return result;
+        }
+    }
+    async submitFeedback(arg0: string, arg1: string, arg2: string, arg3: bigint, arg4: string): Promise<bigint> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.submitFeedback(arg0, arg1, arg2, arg3, arg4);
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.submitFeedback(arg0, arg1, arg2, arg3, arg4);
             return result;
         }
     }

@@ -1,6 +1,7 @@
 import { Link } from '@tanstack/react-router';
 import { Separator } from '@/components/ui/separator';
 import { Mail, Phone, MapPin, Heart } from 'lucide-react';
+import LegalRegistrationDetails from './LegalRegistrationDetails';
 
 export default function SiteFooter() {
   const currentYear = new Date().getFullYear();
@@ -11,7 +12,7 @@ export default function SiteFooter() {
   return (
     <footer className="border-t border-border/40 bg-muted/30">
       <div className="container py-12">
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
@@ -68,6 +69,11 @@ export default function SiteFooter() {
                 <span>A-60, Opp, Siverl Oak, Libherr Chowk, Shendra MIDC, Chh.Sambhajingar, 431154</span>
               </div>
             </div>
+          </div>
+
+          {/* Legal & Registration Details */}
+          <div>
+            <LegalRegistrationDetails />
           </div>
         </div>
 

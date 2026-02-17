@@ -51,8 +51,16 @@ export default function TrustedElectricalContractorsPage() {
       </section>
 
       {/* Company Overview */}
-      <section className="py-16 bg-muted/30">
-        <div className="container">
+      <section className="relative py-16 bg-muted/30 overflow-hidden">
+        {/* Faint Background Logo */}
+        <div
+          className="absolute inset-0 bg-center bg-no-repeat opacity-[0.08]"
+          style={{
+            backgroundImage: 'url(/assets/BMLOGO-1.jpg)',
+            backgroundSize: 'contain',
+          }}
+        />
+        <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold tracking-tight mb-6">About BM ENTERPRISES</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">

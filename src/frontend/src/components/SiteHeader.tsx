@@ -29,7 +29,7 @@ export default function SiteHeader() {
             width="40"
             height="40"
           />
-          <span className="text-xl font-bold tracking-tight">BM ENTERPRISES</span>
+          <span className="text-xl font-bold tracking-tight text-blue-600 dark:text-blue-400">BM ENTERPRISES</span>
         </Link>
 
         {/* Desktop Navigation */}

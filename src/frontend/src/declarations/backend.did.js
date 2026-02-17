@@ -16,11 +16,27 @@ export const Enquiry = IDL.Record({
   'email' : IDL.Text,
   'message' : IDL.Text,
 });
+export const Feedback = IDL.Record({
+  'id' : IDL.Nat,
+  'suggestions' : IDL.Text,
+  'timestampCreated' : Time,
+  'name' : IDL.Text,
+  'email' : IDL.Text,
+  'message' : IDL.Text,
+  'rating' : IDL.Int,
+});
 
 export const idlService = IDL.Service({
   'getAllEnquiries' : IDL.Func([], [IDL.Vec(Enquiry)], ['query']),
+  'getAllFeedback' : IDL.Func([], [IDL.Vec(Feedback)], ['query']),
   'getEnquiry' : IDL.Func([IDL.Nat], [Enquiry], ['query']),
+  'getFeedback' : IDL.Func([IDL.Nat], [Feedback], ['query']),
   'submitEnquiry' : IDL.Func([IDL.Text, IDL.Text, IDL.Text], [IDL.Nat], []),
+  'submitFeedback' : IDL.Func(
+      [IDL.Text, IDL.Text, IDL.Text, IDL.Int, IDL.Text],
+      [IDL.Nat],
+      [],
+    ),
 });
 
 export const idlInitArgs = [];
@@ -34,11 +50,27 @@ export const idlFactory = ({ IDL }) => {
     'email' : IDL.Text,
     'message' : IDL.Text,
   });
+  const Feedback = IDL.Record({
+    'id' : IDL.Nat,
+    'suggestions' : IDL.Text,
+    'timestampCreated' : Time,
+    'name' : IDL.Text,
+    'email' : IDL.Text,
+    'message' : IDL.Text,
+    'rating' : IDL.Int,
+  });
   
   return IDL.Service({
     'getAllEnquiries' : IDL.Func([], [IDL.Vec(Enquiry)], ['query']),
+    'getAllFeedback' : IDL.Func([], [IDL.Vec(Feedback)], ['query']),
     'getEnquiry' : IDL.Func([IDL.Nat], [Enquiry], ['query']),
+    'getFeedback' : IDL.Func([IDL.Nat], [Feedback], ['query']),
     'submitEnquiry' : IDL.Func([IDL.Text, IDL.Text, IDL.Text], [IDL.Nat], []),
+    'submitFeedback' : IDL.Func(
+        [IDL.Text, IDL.Text, IDL.Text, IDL.Int, IDL.Text],
+        [IDL.Nat],
+        [],
+      ),
   });
 };
 

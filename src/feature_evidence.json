@@ -2,9 +2,11 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-remove-the-static-asset-file-for-download-webp-from-the-frontend-public-static-assets-only-if-it-exists-and-is-not-referenced-anywhere-after-req-35-so-it-is-not-shipped-with-the-site-build",
-      "featureTitle": "Remove the static asset file for \"download.webp\" from the frontend public/static assets (only if it exists and is not referenced anywhere after REQ-35), so it is not shipped with the site build.",
-      "files": [],
+      "featureId": "feature-add-the-uploaded-image-bmlogo-1-jpg-as-a-faint-low-opacity-background-behind-the-about-bm-enterprises-section-on-the-trusted-electrical-contractors-landing-page-frontend-src-pages-trustedelectricalcontractorspage-tsx-without-reducing-text-readability",
+      "featureTitle": "Add the uploaded image \"BMLOGO-1.jpg\" as a faint (low-opacity) background behind the \"About BM ENTERPRISES\" section on the Trusted Electrical Contractors landing page (frontend/src/pages/TrustedElectricalContractorsPage.tsx), without reducing text readability.",
+      "files": [
+        "frontend/src/pages/TrustedElectricalContractorsPage.tsx"
+      ],
       "components": [
         "core-infrastructure@1.0.2",
         "shadcn-ui@1.0.0",
@@ -13,7 +15,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-36"
+        "REQ-53"
       ],
       "confidence": "high"
     }

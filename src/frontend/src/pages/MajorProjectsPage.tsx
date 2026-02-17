@@ -56,13 +56,44 @@ export default function MajorProjectsPage() {
       src: '/assets/image.png',
       alt: 'Industrial chimney with blue and white striped pattern and safety ladder installation',
     },
+    {
+      src: '/assets/WhatsApp Image 2026-02-16 at 8.58.56 PM-1.jpeg',
+      alt: 'Professional electrical distribution panel with organized circuit breakers and color-coded wiring system',
+    },
+    {
+      src: '/assets/WhatsApp Image 2026-02-16 at 8.58.59 PM-1.jpeg',
+      alt: 'Industrial cable tray installation with overhead steel framework and electrical infrastructure',
+    },
+    {
+      src: '/assets/WhatsApp Image 2026-02-16 at 8.59.03 PM (1).jpeg',
+      alt: 'Heavy-duty electrical busbar system with multi-phase color-coded conductors and mounting brackets',
+    },
+    {
+      src: '/assets/WhatsApp Image 2026-02-16 at 8.58.59 PM (1).jpeg',
+      alt: 'Industrial electrical room with cable tray systems and organized electrical infrastructure',
+    },
+    {
+      src: '/assets/WhatsApp Image 2026-02-16 at 8.58.55 PM.jpeg',
+      alt: 'Large-scale electrical control room with multiple control panels and comprehensive cable management',
+    },
   ];
 
   return (
     <div className="py-16">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h1 className="text-4xl font-bold tracking-tight mb-4">Major Projects</h1>
+          <h1 className="text-4xl font-bold tracking-tight mb-6">Major Projects</h1>
+          
+          {/* Government Approval & License Block */}
+          <div className="mb-6 py-4 px-6 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-lg border-2 border-primary/30">
+            <div className="font-bold text-xl text-dark-red mb-2">
+              Govt. Approved Electrical Contractor
+            </div>
+            <div className="font-bold text-lg text-dark-red">
+              License No.: 317320383527122022
+            </div>
+          </div>
+
           <p className="text-lg text-muted-foreground">
             BM ENTERPRISES has successfully delivered complex electrical projects across diverse sectors. Here are some of our notable achievements that demonstrate our capability and expertise.
           </p>
