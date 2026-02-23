@@ -1,554 +1,78 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 51,
-  "summary": "Website project for electrical contracting company BM ENTERPRISES, including core business pages and enquiry/contact functionality, with an additional \"Ongoing Projects\" page to be added in the top navigation below \"Gallery\".",
-  "architectural_notes": [
-    "Replace existing contact placeholders with real BM ENTERPRISES contact details: Phone 9561549685 / 7875400932; Email bmenterprises1212@gmail.com; Office A-60, Opp, Siverl Oak, Libherr Chowk, Shendra MIDC, Chh. Sambhajinagar 431154.",
-    "Add \"Legal & Registration Details\" content: GSTIN 27FDNPD6723C1ZM; UDYAM Reg.No UDYAM-MH-04-0083847; PF No. NGAUR2742358000; ESIC ID 33250230640011099.",
-    "Add 'Projects Title' display text: Govt. Approved Electrical Contractor; License NO.: 317320383527122022. Styling requested: bold and colorful.",
-    "Projects Title styling decision: set the text color to dark red for both lines ('Govt. Approved Electrical Contractor' and 'License NO. : 317320383527122022').",
-    "Update SiteHeader branding text color: set \"BM ENTERPRISES\" in the header to blue."
-  ],
-  "known_issues": [
-    "Image deletion request is still ambiguous: user asked to \"delete this picture from the website gallery\" but did not specify which image (filename/screenshot) to remove; needs clarification to avoid removing the wrong asset or leaving broken references.",
-    "Request to add images to the Gallery page is ambiguous because the specific image files were not identified; need filenames/uploads to ensure the correct assets are added.",
-    "User requested to \"add this images\" to the Ongoing Projects (Gallery) section, but the specific image filenames/uploads were not identified; needs clarification to add the correct assets and avoid missing/broken gallery items.",
-    "Placement is ambiguous for the requested 'Projects Title' (which page/section should show it: Major Projects page header, Ongoing Projects page, footer, or elsewhere?). Needs confirmation to implement correctly.",
-    "Background image request is ambiguous: user asked to \"add this picture in faint\" for the \"About BM ENTERPRISES\" background, but did not specify/provide the exact image file to use; needs filename/upload to implement correctly."
-  ],
+  "projectStateVersion": 3,
+  "summary": "New project",
+  "architectural_notes": [],
+  "known_issues": [],
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-create-a-complete-multi-page-company-website-for-the-electrical-contracting-business-named-bm-enterprises-with-top-navigation-and-routes-for-trusted-electrical-contractors-home-landing-our-services-quality-and-safety-policy-major-clients-major-projects-gallery-and-enquiry",
-      "title": "Create a complete multi-page company website for the electrical contracting business named \"BM ENTERPRISES\" with top navigation and routes for: Trusted Electrical Contractors (home/landing), Our Services, Quality and Safety Policy, Major Clients, Major Projects, Gallery, and Enquiry.",
+      "id": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-siteheader-component",
+      "title": "Remove the faint BM logo watermark background image from the SiteHeader component",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     },
     {
-      "id": "feature-implement-a-coherent-professional-visual-theme-for-bm-enterprises-suitable-for-an-electrical-contracting-company-color-palette-typography-spacing-and-component-styling-and-apply-it-consistently-across-all-pages-do-not-use-a-blue-purple-theme",
-      "title": "Implement a coherent, professional visual theme for BM ENTERPRISES suitable for an electrical contracting company (color palette, typography, spacing, and component styling) and apply it consistently across all pages. Do not use a blue/purple theme.",
+      "id": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-servicespage-component",
+      "title": "Remove the faint BM logo watermark background image from the ServicesPage component",
       "reqIds": [
         "REQ-2"
       ],
       "version": 1
     },
     {
-      "id": "feature-build-the-trusted-electrical-contractors-landing-page-content-for-bm-enterprises-including-a-hero-section-company-name-tagline-a-short-company-overview-a-highlights-section-e-g-safety-quality-on-time-delivery-and-clear-calls-to-action-leading-to-services-and-enquiry",
-      "title": "Build the \"Trusted Electrical Contractors\" landing page content for BM ENTERPRISES including: a hero section (company name + tagline), a short company overview, a highlights section (e.g., safety, quality, on-time delivery), and clear calls-to-action leading to Services and Enquiry.",
+      "id": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-qualitysafetypolicypage-component",
+      "title": "Remove the faint BM logo watermark background image from the QualitySafetyPolicyPage component",
       "reqIds": [
         "REQ-3"
       ],
       "version": 1
     },
     {
-      "id": "feature-build-the-our-services-page-with-a-structured-list-grid-of-electrical-contracting-services-with-short-descriptions-using-reusable-ui-sections-cards",
-      "title": "Build the \"Our Services\" page with a structured list/grid of electrical contracting services with short descriptions, using reusable UI sections/cards.",
+      "id": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-majorclientspage-component",
+      "title": "Remove the faint BM logo watermark background image from the MajorClientsPage component",
       "reqIds": [
         "REQ-4"
       ],
       "version": 1
     },
     {
-      "id": "feature-build-the-quality-and-safety-policy-page-with-well-formatted-policy-content-and-clear-section-headings-e-g-quality-commitment-safety-commitment-compliance-training",
-      "title": "Build the \"Quality and Safety Policy\" page with well-formatted policy content and clear section headings (e.g., Quality Commitment, Safety Commitment, Compliance/Training).",
+      "id": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-majorprojectspage-component",
+      "title": "Remove the faint BM logo watermark background image from the MajorProjectsPage component",
       "reqIds": [
         "REQ-5"
       ],
       "version": 1
     },
     {
-      "id": "feature-build-the-major-clients-page-displaying-a-list-grid-of-client-names-initially-static-with-a-clean-presentation-suitable-for-future-updates",
-      "title": "Build the \"Major Clients\" page displaying a list/grid of client names (initially static) with a clean presentation suitable for future updates.",
+      "id": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-gallerypage-component",
+      "title": "Remove the faint BM logo watermark background image from the GalleryPage component",
       "reqIds": [
         "REQ-6"
       ],
       "version": 1
     },
     {
-      "id": "feature-build-the-major-projects-page-with-a-list-of-projects-initially-static-showing-at-minimum-project-name-title-location-if-provided-later-and-a-short-description-scope-field-provide-a-layout-that-supports-multiple-projects",
-      "title": "Build the \"Major Projects\" page with a list of projects (initially static) showing at minimum: project name/title, location (if provided later), and a short description/scope field. Provide a layout that supports multiple projects.",
+      "id": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-enquirypage-component-contact-us-section",
+      "title": "Remove the faint BM logo watermark background image from the EnquiryPage component (Contact Us section)",
       "reqIds": [
         "REQ-7"
       ],
       "version": 1
     },
     {
-      "id": "feature-build-the-gallery-page-displaying-a-responsive-grid-of-images-sourced-from-static-assets-with-a-simple-lightbox-modal-view-when-clicking-an-image",
-      "title": "Build the \"Gallery\" page displaying a responsive grid of images sourced from static assets, with a simple lightbox/modal view when clicking an image.",
+      "id": "feature-remove-all-watermark-related-css-classes-watermark-bg-primary-watermark-bg-light-watermark-bg-dark-from-frontend-src-index-css",
+      "title": "Remove all watermark-related CSS classes (watermark-bg-primary, watermark-bg-light, watermark-bg-dark) from frontend/src/index.css",
       "reqIds": [
         "REQ-8"
       ],
       "version": 1
-    },
-    {
-      "id": "feature-implement-an-enquiry-page-section-with-a-contact-enquiry-form-for-bm-enterprises-that-collects-at-least-name-phone-email-at-least-one-required-subject-and-message-validate-inputs-and-show-success-error-states",
-      "title": "Implement an \"Enquiry\" page/section with a contact/enquiry form for BM ENTERPRISES that collects at least: name, phone/email (at least one required), subject, and message; validate inputs; and show success/error states.",
-      "reqIds": [
-        "REQ-9"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-wire-the-enquiry-form-submission-to-the-backend-using-the-existing-actor-setup-and-react-query-mutation-patterns-and-display-the-returned-acknowledgement-e-g-enquiry-reference-to-the-user-upon-success",
-      "title": "Wire the Enquiry form submission to the backend using the existing actor setup and React Query mutation patterns, and display the returned acknowledgement (e.g., enquiry reference) to the user upon success.",
-      "reqIds": [
-        "REQ-11"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-a-site-footer-shown-across-all-pages-containing-bm-enterprises-name-basic-contact-placeholders-phone-email-address-placeholders-in-english-and-quick-links-to-the-main-pages",
-      "title": "Add a site footer shown across all pages containing: BM ENTERPRISES name, basic contact placeholders (phone/email/address placeholders in English), and quick links to the main pages.",
-      "reqIds": [
-        "REQ-12"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-the-uploaded-company-logo-image-bmlogo-jpg-to-the-frontend-static-assets-and-update-the-site-branding-to-use-it-in-the-global-header-and-footer-in-place-of-the-current-generated-logo-image",
-      "title": "Add the uploaded company logo image (BMLOGO.jpg) to the frontend static assets and update the site branding to use it in the global header and footer in place of the current generated logo image.",
-      "reqIds": [
-        "REQ-13"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-site-footer-contact-details-to-use-the-provided-bm-enterprises-phone-numbers-email-address-and-office-address-replace-the-current-placeholder-contact-information",
-      "title": "Update the site footer contact details to use the provided BM ENTERPRISES phone numbers, email address, and office address (replace the current placeholder contact information).",
-      "reqIds": [
-        "REQ-14"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-the-provided-bm-enterprises-contact-information-to-the-enquiry-contact-us-page-as-a-clearly-labeled-direct-contact-section-near-the-top-of-the-page-in-english-using-the-same-phone-numbers-email-and-office-address-as-the-footer",
-      "title": "Add the provided BM ENTERPRISES contact information to the Enquiry (Contact Us) page as a clearly labeled 'Direct Contact' section near the top of the page, in English, using the same phone numbers, email, and office address as the footer.",
-      "reqIds": [
-        "REQ-15"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-the-uploaded-image-file-trusted-electrical-contactor-jpeg-to-the-frontend-static-assets-and-display-it-on-the-trusted-electrical-contractors-home-landing-page-route-as-a-prominent-visual-element-e-g-within-the-hero-area-or-as-a-dedicated-visual-section-near-the-top",
-      "title": "Add the uploaded image file \"trusted electrical contactor.jpeg\" to the frontend static assets and display it on the \"Trusted Electrical Contractors\" (home/landing) page (route \"/\") as a prominent visual element (e.g., within the hero area or as a dedicated visual section near the top).",
-      "reqIds": [
-        "REQ-16"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-the-uploaded-image-file-our-services-jpeg-to-the-frontend-static-assets-and-display-it-prominently-on-the-our-services-page-route-services-positioned-near-the-top-of-the-page-e-g-between-the-page-intro-text-and-the-services-grid-with-responsive-sizing-and-proper-alt-text-in-english",
-      "title": "Add the uploaded image file \"our services.jpeg\" to the frontend static assets and display it prominently on the \"Our Services\" page (route \"/services\"), positioned near the top of the page (e.g., between the page intro text and the services grid) with responsive sizing and proper alt text in English.",
-      "reqIds": [
-        "REQ-17"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-generate-a-new-static-image-asset-for-the-quality-and-safety-policy-page-and-add-it-to-the-frontend-public-assets-so-it-can-be-referenced-directly-by-the-page",
-      "title": "Generate a new static image asset for the Quality and Safety Policy page and add it to the frontend public assets so it can be referenced directly by the page.",
-      "reqIds": [
-        "REQ-18"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-quality-and-safety-policy-page-route-quality-safety-to-display-the-new-image-prominently-near-the-top-of-the-page-between-the-page-title-intro-block-and-the-policy-cards-with-responsive-sizing-rounded-corners-and-a-shadow-consistent-with-the-services-page-image-styling-and-with-appropriate-english-alt-text",
-      "title": "Update the Quality and Safety Policy page (route \"/quality-safety\") to display the new image prominently near the top of the page (between the page title/intro block and the policy cards), with responsive sizing, rounded corners, and a shadow consistent with the Services page image styling, and with appropriate English alt text.",
-      "reqIds": [
-        "REQ-19"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-quality-and-safety-policy-page-route-quality-safety-to-display-the-uploaded-image-safety-policy-jpeg-as-the-prominent-hero-image-near-the-top-of-the-page-replacing-the-currently-referenced-generated-image-keeping-the-same-responsive-styling-rounded-corners-shadow-object-cover-and-using-appropriate-english-alt-text",
-      "title": "Update the Quality and Safety Policy page (route \"/quality-safety\") to display the uploaded image \"safety policy.jpeg\" as the prominent hero image near the top of the page (replacing the currently referenced generated image), keeping the same responsive styling (rounded corners, shadow, object-cover) and using appropriate English alt text.",
-      "reqIds": [
-        "REQ-21"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-major-clients-page-route-clients-to-display-the-uploaded-image-major-clients-jpeg-prominently-near-the-top-of-the-page-positioned-between-the-page-title-intro-block-and-the-clients-grid-with-responsive-sizing-and-appropriate-english-alt-text",
-      "title": "Update the Major Clients page (route \"/clients\") to display the uploaded image \"major clients.jpeg\" prominently near the top of the page, positioned between the page title/intro block and the clients grid, with responsive sizing and appropriate English alt text.",
-      "reqIds": [
-        "REQ-23"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-a-prominent-featured-image-section-to-the-major-projects-page-route-projects-positioned-between-the-page-title-intro-block-and-the-projects-grid-using-the-same-responsive-styling-pattern-used-on-services-and-major-clients-pages-full-width-max-w-5xl-centered-rounded-corners-shadow-object-cover",
-      "title": "Add a prominent featured image section to the Major Projects page (route \"/projects\"), positioned between the page title/intro block and the projects grid, using the same responsive styling pattern used on Services and Major Clients pages (full width, max-w-5xl, centered, rounded corners, shadow, object-cover).",
-      "reqIds": [
-        "REQ-24"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-the-new-major-projects-featured-image-as-a-static-asset-under-the-public-assets-path-so-it-can-be-referenced-by-the-major-projects-page-via-an-absolute-path-e-g-assets-generated-without-routing-the-image-through-the-backend",
-      "title": "Add the new Major Projects featured image as a static asset under the public assets path so it can be referenced by the Major Projects page via an absolute path (e.g., \"/assets/generated/...\"), without routing the image through the backend.",
-      "reqIds": [
-        "REQ-25"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-major-projects-page-route-projects-featured-image-to-use-the-uploaded-image-img-20260216-183152-jpg-major-project-jpeg-instead-of-the-currently-referenced-generated-hero-image-keeping-the-same-responsive-styling-full-width-max-w-5xl-centered-rounded-corners-shadow-object-cover-and-using-appropriate-english-alt-text",
-      "title": "Update the Major Projects page (route \"/projects\") featured image to use the uploaded image \"IMG_20260216_183152.jpg major project.jpeg\" instead of the currently referenced generated hero image, keeping the same responsive styling (full width, max-w-5xl centered, rounded corners, shadow, object-cover) and using appropriate English alt text.",
-      "reqIds": [
-        "REQ-27"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-create-a-new-frontend-page-named-ongoing-projects-with-a-new-route-e-g-ongoing-projects-and-implement-the-page-component-under-frontend-src-pages-e-g-ongoingprojectspage-tsx-the-page-must-include-an-h1-title-ongoing-projects-and-a-short-english-intro-paragraph-styled-consistently-with-existing-pages-container-centered-header-block-spacing",
-      "title": "Create a new frontend page named \"Ongoing Projects\" with a new route (e.g., \"/ongoing-projects\") and implement the page component under frontend/src/pages (e.g., OngoingProjectsPage.tsx). The page must include an H1 title \"Ongoing Projects\" and a short English intro paragraph, styled consistently with existing pages (container, centered header block, spacing).",
-      "reqIds": [
-        "REQ-28"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-register-the-new-ongoing-projects-page-in-the-tanstack-router-route-tree-in-frontend-src-app-tsx-so-it-is-reachable-via-the-chosen-path",
-      "title": "Register the new \"Ongoing Projects\" page in the TanStack Router route tree in frontend/src/App.tsx so it is reachable via the chosen path.",
-      "reqIds": [
-        "REQ-29"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-main-site-header-navigation-frontend-src-components-siteheader-tsx-to-include-a-new-nav-item-labeled-ongoing-projects-positioned-directly-below-gallery-i-e-after-the-gallery-link-and-before-enquiry-in-both-desktop-and-mobile-navigation",
-      "title": "Update the main site header navigation (frontend/src/components/SiteHeader.tsx) to include a new nav item labeled \"Ongoing Projects\" positioned directly below \"Gallery\" (i.e., after the Gallery link and before Enquiry) in both desktop and mobile navigation.",
-      "reqIds": [
-        "REQ-30"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-ongoing-projects-page-to-include-an-ongoing-projects-gallery-section-that-displays-the-6-uploaded-images-in-a-responsive-grid-with-a-click-to-preview-lightbox-modal-interaction-consistent-with-the-existing-gallery-page-behavior",
-      "title": "Update the Ongoing Projects page to include an \"Ongoing Projects (Gallery)\" section that displays the 6 uploaded images in a responsive grid with a click-to-preview lightbox/modal interaction consistent with the existing Gallery page behavior.",
-      "reqIds": [
-        "REQ-32"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-remove-the-uploaded-image-whatsapp-image-2026-02-16-at-8-58-51-pm-1-3-from-the-website-so-it-is-no-longer-displayed-anywhere-including-the-major-projects-page-ongoing-projects-gallery-section-and-ensure-no-broken-image-references-remain",
-      "title": "Remove the uploaded image \"WhatsApp Image 2026-02-16 at 8.58.51 PM (1)-3\" from the website so it is no longer displayed anywhere (including the Major Projects page 'Ongoing Projects (Gallery)' section), and ensure no broken image references remain.",
-      "reqIds": [
-        "REQ-33"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-remove-the-static-asset-file-for-the-uploaded-image-from-the-frontend-public-assets-if-it-exists-and-is-not-referenced-elsewhere-after-req-33-so-it-is-not-shipped-with-the-site-build",
-      "title": "Remove the static asset file for the uploaded image from the frontend public assets if it exists and is not referenced elsewhere after REQ-33 (so it is not shipped with the site build).",
-      "reqIds": [
-        "REQ-34"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-remove-the-static-asset-file-for-download-webp-from-the-frontend-public-static-assets-only-if-it-exists-and-is-not-referenced-anywhere-after-req-35-so-it-is-not-shipped-with-the-site-build",
-      "title": "Remove the static asset file for \"download.webp\" from the frontend public/static assets (only if it exists and is not referenced anywhere after REQ-35), so it is not shipped with the site build.",
-      "reqIds": [
-        "REQ-36"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-remove-the-uploaded-image-file-download-1-webp-from-the-website-so-it-is-no-longer-displayed-anywhere-in-any-gallery-lightbox-including-the-main-gallery-page-and-any-other-pages-that-use-imagegallerygrid-and-ensure-no-broken-image-references-remain",
-      "title": "Remove the uploaded image file \"download-1.webp\" from the website so it is no longer displayed anywhere in any gallery/lightbox (including the main Gallery page and any other pages that use ImageGalleryGrid), and ensure no broken image references remain.",
-      "reqIds": [
-        "REQ-37"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-remove-the-static-asset-file-for-the-uploaded-image-download-1-webp-from-the-frontend-public-assets-only-if-it-exists-and-is-not-referenced-anywhere-after-req-37-so-it-is-not-shipped-with-the-site-build",
-      "title": "Remove the static asset file for the uploaded image \"download-1.webp\" from the frontend public assets only if it exists and is not referenced anywhere after REQ-37, so it is not shipped with the site build.",
-      "reqIds": [
-        "REQ-38"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-the-5-newly-uploaded-images-to-the-main-gallery-page-frontend-src-pages-gallerypage-tsx-so-they-appear-in-the-gallery-grid-and-open-correctly-in-the-existing-lightbox-preview-when-clicked",
-      "title": "Add the 5 newly uploaded images to the main Gallery page (frontend/src/pages/GalleryPage.tsx) so they appear in the gallery grid and open correctly in the existing lightbox preview when clicked.",
-      "reqIds": [
-        "REQ-39"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-the-5-newly-uploaded-images-to-the-main-gallery-page-frontend-src-pages-gallerypage-tsx-so-they-appear-in-the-gallery-grid-and-open-correctly-in-the-existing-lightbox-preview-when-clicked-the-images-are-whatsapp-image-2026-02-16-at-8-58-58-pm-1-jpeg-whatsapp-image-2026-02-16-at-8-58-58-pm-jpeg-whatsapp-image-2026-02-16-at-8-58-57-pm-jpeg-whatsapp-image-2026-02-16-at-8-59-00-pm-jpeg-and-whatsapp-image-2026-02-16-at-8-58-59-pm-jpeg",
-      "title": "Add the 5 newly uploaded images to the main Gallery page (frontend/src/pages/GalleryPage.tsx) so they appear in the gallery grid and open correctly in the existing lightbox preview when clicked. The images are: \"WhatsApp Image 2026-02-16 at 8.58.58 PM (1).jpeg\", \"WhatsApp Image 2026-02-16 at 8.58.58 PM.jpeg\", \"WhatsApp Image 2026-02-16 at 8.58.57 PM.jpeg\", \"WhatsApp Image 2026-02-16 at 8.59.00 PM.jpeg\", and \"WhatsApp Image 2026-02-16 at 8.58.59 PM.jpeg\".",
-      "reqIds": [
-        "REQ-40"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-the-4-newly-uploaded-images-to-the-main-gallery-page-frontend-src-pages-gallerypage-tsx-so-they-appear-in-the-gallery-grid-and-open-correctly-in-the-existing-lightbox-preview-when-clicked-the-images-are-whatsapp-image-2026-02-16-at-8-59-02-pm-jpeg-whatsapp-image-2026-02-16-at-8-59-03-pm-jpeg-whatsapp-image-2026-02-16-at-8-59-01-pm-jpeg-and-whatsapp-image-2026-02-16-at-8-58-57-pm-1-jpeg",
-      "title": "Add the 4 newly uploaded images to the main Gallery page (frontend/src/pages/GalleryPage.tsx) so they appear in the gallery grid and open correctly in the existing lightbox preview when clicked. The images are: \"WhatsApp Image 2026-02-16 at 8.59.02 PM.jpeg\", \"WhatsApp Image 2026-02-16 at 8.59.03 PM.jpeg\", \"WhatsApp Image 2026-02-16 at 8.59.01 PM.jpeg\", and \"WhatsApp Image 2026-02-16 at 8.58.57 PM (1).jpeg\".",
-      "reqIds": [
-        "REQ-41"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-the-5-newly-uploaded-images-to-the-ongoing-projects-gallery-image-grid-displayed-on-the-major-projects-page-frontend-src-pages-majorprojectspage-tsx-so-they-appear-in-the-gallery-and-open-correctly-in-the-existing-lightbox-preview-when-clicked-the-images-are-whatsapp-image-2026-02-16-at-8-58-56-pm-1-jpeg-whatsapp-image-2026-02-16-at-8-58-59-pm-1-jpeg-whatsapp-image-2026-02-16-at-8-59-03-pm-1-jpeg-whatsapp-image-2026-02-16-at-8-58-59-pm-1-jpeg-and-whatsapp-image-2026-02-16-at-8-58-55-pm-jpeg",
-      "title": "Add the 5 newly uploaded images to the \"Ongoing Projects (Gallery)\" image grid displayed on the Major Projects page (frontend/src/pages/MajorProjectsPage.tsx) so they appear in the gallery and open correctly in the existing lightbox preview when clicked. The images are: \"WhatsApp Image 2026-02-16 at 8.58.56 PM-1.jpeg\", \"WhatsApp Image 2026-02-16 at 8.58.59 PM-1.jpeg\", \"WhatsApp Image 2026-02-16 at 8.59.03 PM (1).jpeg\", \"WhatsApp Image 2026-02-16 at 8.58.59 PM (1).jpeg\", and \"WhatsApp Image 2026-02-16 at 8.58.55 PM.jpeg\".",
-      "reqIds": [
-        "REQ-43"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-a-new-section-titled-legal-registration-details-to-the-global-site-footer-frontend-src-components-sitefooter-tsx-and-display-the-following-items-exactly-as-provided-gstin-27fdnpd6723c1zm-udyam-reg-no-udyam-mh-04-0083847-pf-no-ngaur2742358000-esic-id-33250230640011099",
-      "title": "Add a new section titled \"Legal & Registration Details\" to the global site footer (frontend/src/components/SiteFooter.tsx) and display the following items exactly as provided: GSTIN: 27FDNPD6723C1ZM; UDYAM Reg. No.: UDYAM-MH-04-0083847; PF No.: NGAUR2742358000; ESIC ID: 33250230640011099.",
-      "reqIds": [
-        "REQ-44"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-a-legal-registration-details-section-to-the-contact-us-page-frontend-src-pages-enquirypage-tsx-placed-near-the-existing-direct-contact-section-displaying-the-same-four-identifiers-gstin-27fdnpd6723c1zm-udyam-reg-no-udyam-mh-04-0083847-pf-no-ngaur2742358000-esic-id-33250230640011099",
-      "title": "Add a \"Legal & Registration Details\" section to the Contact Us page (frontend/src/pages/EnquiryPage.tsx), placed near the existing \"Direct Contact\" section, displaying the same four identifiers: GSTIN 27FDNPD6723C1ZM; UDYAM Reg. No. UDYAM-MH-04-0083847; PF No. NGAUR2742358000; ESIC ID 33250230640011099.",
-      "reqIds": [
-        "REQ-45"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-on-the-projects-page-route-projects-component-frontend-src-pages-majorprojectspage-tsx-add-a-prominent-bold-colorful-projects-title-block-in-the-top-header-area-near-the-existing-page-h1-that-displays-the-following-lines-in-english-exactly-govt-approved-electrical-contractor-license-no-317320383527122022",
-      "title": "On the Projects page (route \"/projects\", component frontend/src/pages/MajorProjectsPage.tsx), add a prominent, bold, colorful \"Projects Title\" block in the top header area (near the existing page H1) that displays the following lines in English exactly:\n- \"Govt. Approved Electrical Contractor\"\n- \"License No.: 317320383527122022\"",
-      "reqIds": [
-        "REQ-46"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-government-approval-license-block-text-color-on-the-major-projects-page-route-projects-component-frontend-src-pages-majorprojectspage-tsx-so-both-lines-govt-approved-electrical-contractor-and-license-no-317320383527122022-render-in-a-dark-red-color-instead-of-the-current-gradient-text-styling-while-keeping-the-text-content-exactly-the-same",
-      "title": "Update the \"Government Approval & License Block\" text color on the Major Projects page (route \"/projects\", component \"frontend/src/pages/MajorProjectsPage.tsx\") so both lines—\"Govt. Approved Electrical Contractor\" and \"License No.: 317320383527122022\"—render in a dark red color instead of the current gradient text styling, while keeping the text content exactly the same.",
-      "reqIds": [
-        "REQ-47"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-a-new-client-feedback-section-on-the-contact-us-enquiry-page-frontend-src-pages-enquirypage-tsx-that-allows-clients-to-submit-feedback-when-they-are-on-the-send-us-an-enquiry-page-and-clearly-display-the-feedback-email-address-bmenterprises1212-gmail-com-in-that-section",
-      "title": "Add a new \"Client Feedback\" section on the Contact Us (Enquiry) page (frontend/src/pages/EnquiryPage.tsx) that allows clients to submit feedback when they are on the \"Send Us an Enquiry\" page, and clearly display the feedback email address \"bmenterprises1212@gmail.com\" in that section.",
-      "reqIds": [
-        "REQ-48"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-wire-the-new-client-feedback-form-to-the-backend-using-the-existing-actor-react-query-patterns-similar-to-frontend-src-hooks-usesubmitenquiry-ts-and-display-the-returned-feedback-reference-number-to-the-user-upon-successful-submission",
-      "title": "Wire the new Client Feedback form to the backend using the existing actor + React Query patterns (similar to frontend/src/hooks/useSubmitEnquiry.ts), and display the returned feedback reference number to the user upon successful submission.",
-      "reqIds": [
-        "REQ-50"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-display-a-recent-client-feedback-list-on-the-contact-us-page-that-reads-feedback-entries-from-the-backend-and-renders-them-in-a-clean-card-list-layout-english-labels-showing-at-least-the-submitter-name-the-feedback-message-and-a-human-friendly-submitted-date",
-      "title": "Display a \"Recent Client Feedback\" list on the Contact Us page that reads feedback entries from the backend and renders them in a clean card/list layout (English labels), showing at least the submitter name, the feedback message, and a human-friendly submitted date.",
-      "reqIds": [
-        "REQ-51"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-global-site-header-branding-text-bm-enterprises-in-frontend-src-components-siteheader-tsx-to-render-in-a-blue-color-while-keeping-the-text-content-exactly-bm-enterprises-and-leaving-the-logo-image-unchanged",
-      "title": "Update the global site header branding text \"BM ENTERPRISES\" (in frontend/src/components/SiteHeader.tsx) to render in a blue color while keeping the text content exactly \"BM ENTERPRISES\" and leaving the logo image unchanged.",
-      "reqIds": [
-        "REQ-52"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-the-uploaded-image-bmlogo-1-jpg-as-a-faint-low-opacity-background-behind-the-about-bm-enterprises-section-on-the-trusted-electrical-contractors-landing-page-frontend-src-pages-trustedelectricalcontractorspage-tsx-without-reducing-text-readability",
-      "title": "Add the uploaded image \"BMLOGO-1.jpg\" as a faint (low-opacity) background behind the \"About BM ENTERPRISES\" section on the Trusted Electrical Contractors landing page (frontend/src/pages/TrustedElectricalContractorsPage.tsx), without reducing text readability.",
-      "reqIds": [
-        "REQ-53"
-      ],
-      "version": 1
     }
   ],
-  "new_feature_requests": [
-    {
-      "id": "AR-1",
-      "summary": "Create a complete professional website for BM ENTERPRISES with pages: Trusted Electrical Contractors, Our Services, Quality and Safety Policy, Major Clients, Major Projects, Gallery, and an Enquiry section.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-11",
-      "summary": "Add backend support to store enquiries submitted from the Enquiry form, including timestamp and the submitted fields, and expose a canister method to create an enquiry and return an acknowledgement (e.g., an enquiry ID).",
-      "reqIds": [
-        "REQ-10"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": "AR-12",
-      "summary": "Add the company logo to the website branding (e.g., header/nav and other appropriate locations) using the provided BM ENTERPRISES logo asset.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-13",
-      "summary": "Update the site contact information (footer and any relevant contact/enquiry sections) to use the provided phone numbers, email address, and office address for BM ENTERPRISES.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-14",
-      "summary": "Add an image/visual section to the \"Trusted Electrical Contractors\" (home/landing) page.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-15",
-      "summary": "Add an image/visual section to the \"Our Services\" page.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-16",
-      "summary": "Add an image/visual section to the \"Quality and Safety Policy\" page (route \"/quality-safety\"), positioned near the top with responsive sizing and appropriate alt text.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-17",
-      "summary": "Add the uploaded image files (\"safety policy.jpeg\", \"safety policy-1.jpeg\", \"safety policy-2.jpeg\") to the frontend static assets so they can be referenced by the app.",
-      "reqIds": [
-        "REQ-20"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": "AR-18",
-      "summary": "Add an image/visual section to the \"Major Clients\" page (route \"/clients\"), positioned near the top with responsive sizing and appropriate alt text.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-19",
-      "summary": "Add the uploaded image file \"major clients.jpeg\" to the frontend static assets under the existing public assets path so it can be referenced at runtime (e.g., via \"/assets/major clients.jpeg\").",
-      "reqIds": [
-        "REQ-22"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": "AR-20",
-      "summary": "Add an image/visual section to the \"Major Projects\" (Our Projects) page, positioned near the top with responsive sizing and appropriate English alt text.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-21",
-      "summary": "Add the uploaded image file \"IMG_20260216_183152.jpg major project.jpeg\" to the frontend static assets (under the existing public assets path) so it can be referenced at runtime via an absolute path.",
-      "reqIds": [
-        "REQ-26"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": "AR-22",
-      "summary": "Create a new website page named \"Ongoing Projects\" and add it to the main navigation positioned below \"Gallery\".",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-23",
-      "summary": "Add images to the \"Ongoing Projects\" page in a Gallery-style section/grid (Ongoing Projects Gallery).",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-24",
-      "summary": "Add the 6 newly uploaded images as static assets in the frontend so they can be referenced by the Ongoing Projects page at runtime.",
-      "reqIds": [
-        "REQ-31"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": "AR-25",
-      "summary": "Remove the specified image from the website (requires identifying which image/page).",
-      "reqIds": [],
-      "status": "blocked"
-    },
-    {
-      "id": "AR-26",
-      "summary": "Remove the uploaded image file \"download.webp\" from the BM ENTERPRISES website so it is no longer displayed anywhere, including any page sections, galleries, or featured images.",
-      "reqIds": [
-        "REQ-35"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": "AR-27",
-      "summary": "Add the newly provided/uploaded images to the main Gallery page (ensure they appear in the grid and lightbox, with no broken references).",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-29",
-      "summary": "Ensure the 4 newly uploaded images are present as frontend static assets under the existing public assets path so they can be referenced at runtime by absolute paths (e.g., \"/assets/<filename>\") exactly matching their filenames.",
-      "reqIds": [
-        "REQ-42"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": "AR-30",
-      "summary": "Add a \"Legal & Registration Details\" section to the BM ENTERPRISES website displaying: GSTIN 27FDNPD6723C1ZM; UDYAM Reg.No UDYAM-MH-04-0083847; PF No. NGAUR2742358000; ESIC ID 33250230640011099.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-31",
-      "summary": "Add 'Projects Title' content: 'Govt. Approved Electrical Contractor' and 'License NO.: 317320383527122022' displayed prominently with bold, colorful styling (location to be confirmed, likely near Projects/Major Projects content).",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-32",
-      "summary": "Add a client feedback option/section related to the Enquiry flow (allow clients to submit feedback when sending an enquiry, and/or display client feedback/testimonials on the Enquiry/Contact page).",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-34",
-      "summary": "Implement backend support to store and retrieve client feedback entries in the existing single Motoko actor (backend/main.mo), including an auto-incremented feedback ID and a creation timestamp.",
-      "reqIds": [
-        "REQ-49"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": "AR-35",
-      "summary": "Change the header branding text \"BM ENTERPRISES\" to display in blue color.",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-36",
-      "summary": "Add a faint (low-opacity) background image behind the \"About BM ENTERPRISES\" section/page.",
-      "reqIds": [],
-      "status": "pending"
-    }
-  ],
-  "gameProjectType": "none",
-  "projectName": "BM ENTERPRISES",
+  "new_feature_requests": [],
+  "projectName": "Remove faint watermark image from header and service sections",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-add-the-uploaded-image-bmlogo-1-jpg-as-a-faint-low-opacity-background-behind-the-about-bm-enterprises-section-on-the-trusted-electrical-contractors-landing-page-frontend-src-pages-trustedelectricalcontractorspage-tsx-without-reducing-text-readability",
-      "featureTitle": "Add the uploaded image \"BMLOGO-1.jpg\" as a faint (low-opacity) background behind the \"About BM ENTERPRISES\" section on the Trusted Electrical Contractors landing page (frontend/src/pages/TrustedElectricalContractorsPage.tsx), without reducing text readability.",
+      "featureId": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-siteheader-component",
+      "featureTitle": "Remove the faint BM logo watermark background image from the SiteHeader component",
       "files": [
-        "frontend/src/pages/TrustedElectricalContractorsPage.tsx"
+        "frontend/src/components/SiteHeader.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -15,7 +15,133 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-53"
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-servicespage-component",
+      "featureTitle": "Remove the faint BM logo watermark background image from the ServicesPage component",
+      "files": [
+        "frontend/src/pages/ServicesPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-qualitysafetypolicypage-component",
+      "featureTitle": "Remove the faint BM logo watermark background image from the QualitySafetyPolicyPage component",
+      "files": [
+        "frontend/src/pages/QualitySafetyPolicyPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-majorclientspage-component",
+      "featureTitle": "Remove the faint BM logo watermark background image from the MajorClientsPage component",
+      "files": [
+        "frontend/src/pages/MajorClientsPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-majorprojectspage-component",
+      "featureTitle": "Remove the faint BM logo watermark background image from the MajorProjectsPage component",
+      "files": [
+        "frontend/src/pages/MajorProjectsPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-gallerypage-component",
+      "featureTitle": "Remove the faint BM logo watermark background image from the GalleryPage component",
+      "files": [
+        "frontend/src/pages/GalleryPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-enquirypage-component-contact-us-section",
+      "featureTitle": "Remove the faint BM logo watermark background image from the EnquiryPage component (Contact Us section)",
+      "files": [
+        "frontend/src/pages/EnquiryPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-all-watermark-related-css-classes-watermark-bg-primary-watermark-bg-light-watermark-bg-dark-from-frontend-src-index-css",
+      "featureTitle": "Remove all watermark-related CSS classes (watermark-bg-primary, watermark-bg-light, watermark-bg-dark) from frontend/src/index.css",
+      "files": [
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
       ],
       "confidence": "high"
     }

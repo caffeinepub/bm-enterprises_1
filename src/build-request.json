@@ -1,49 +1,154 @@
 {
   "kind": "build_request",
-  "title": "Add faint logo background to About section",
-  "projectName": "BM ENTERPRISES",
+  "title": "Remove faint watermark image from header and service sections",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-53",
-      "text": "Add the uploaded image \"BMLOGO-1.jpg\" as a faint (low-opacity) background behind the \"About BM ENTERPRISES\" section on the Trusted Electrical Contractors landing page (frontend/src/pages/TrustedElectricalContractorsPage.tsx), without reducing text readability.",
+      "id": "REQ-1",
+      "text": "Remove the faint BM logo watermark background image from the SiteHeader component",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-user-final"
         ],
         "quotes": [
-          "add this picture in faint :On Background                   About BM ENTERPRISES"
+          "REMOVE/DELETE THIS IMAGE IN FAINT : IN HEADER"
         ]
       },
       "acceptanceCriteria": [
-        "The \"About BM ENTERPRISES\" section on the Trusted Electrical Contractors page displays BMLOGO-1.jpg as a background image with low opacity (faint effect).",
-        "The background image is positioned behind the section content (does not shift layout or overlap text/buttons).",
-        "Text in the section remains clearly readable on all screen sizes (desktop and mobile).",
-        "The background image is loaded as a static frontend asset (not routed through the backend)."
+        "The header no longer displays any faint watermark background image",
+        "The header maintains its existing layout and styling without the watermark"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Remove the faint BM logo watermark background image from the ServicesPage component",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-final"
+        ],
+        "quotes": [
+          "ON BACKGROUND BELOW NAMES - Our Services"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The Services page no longer displays any faint watermark background image",
+        "All service cards and content remain visible and properly styled"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Remove the faint BM logo watermark background image from the QualitySafetyPolicyPage component",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-final"
+        ],
+        "quotes": [
+          "ON BACKGROUND BELOW NAMES - Quality and Safety Policy"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The Quality and Safety Policy page no longer displays any faint watermark background image",
+        "All policy content remains readable and properly formatted"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Remove the faint BM logo watermark background image from the MajorClientsPage component",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-final"
+        ],
+        "quotes": [
+          "ON BACKGROUND BELOW NAMES - Major Clients"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The Major Clients page no longer displays any faint watermark background image",
+        "The client logos image remains visible without background watermark"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Remove the faint BM logo watermark background image from the MajorProjectsPage component",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-final"
+        ],
+        "quotes": [
+          "ON BACKGROUND BELOW NAMES - Major Projects"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The Major Projects page no longer displays any faint watermark background image",
+        "All project cards and gallery images display without background watermark"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Remove the faint BM logo watermark background image from the GalleryPage component",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-final"
+        ],
+        "quotes": [
+          "ON BACKGROUND BELOW NAMES - Project Gallery"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The Gallery page no longer displays any faint watermark background image",
+        "The project image grid displays cleanly without background watermark"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Remove the faint BM logo watermark background image from the EnquiryPage component (Contact Us section)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-final"
+        ],
+        "quotes": [
+          "ON BACKGROUND BELOW NAMES - Contact Us"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The Enquiry/Contact page no longer displays any faint watermark background image",
+        "All forms and feedback sections remain functional and clearly visible"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Remove all watermark-related CSS classes (watermark-bg-primary, watermark-bg-light, watermark-bg-dark) from frontend/src/index.css",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-final"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All watermark utility classes are removed from the CSS file",
+        "No watermark-related CSS remains in the codebase"
       ]
     }
   ],
   "constraints": [
-    "Do not modify any files under frontend/src/components/ui (shadcn components are read-only).",
-    "Keep all changes within the existing React + Tailwind CSS patterns used in the project."
+    "Do not modify backend files",
+    "Preserve all existing functionality and content on each page",
+    "Maintain current layout and styling aside from removing watermark backgrounds"
   ],
   "nonGoals": [
-    "Do not change the existing header logo or footer logo behavior.",
-    "Do not apply the faint background logo to other pages/sections unless explicitly requested."
+    "Adding new watermark images",
+    "Redesigning page layouts",
+    "Modifying content or text on any pages"
   ],
   "imageRequirements": {
     "required": [],
     "edits": []
-  },
-  "userProfileUpdate": {
-    "goalsToAdd": [],
-    "goalsToRemove": [],
-    "preferencesToAdd": [],
-    "preferencesToRemove": [],
-    "miscToAdd": [],
-    "miscToRemove": [],
-    "fieldsToSet": {},
-    "fieldsToDelete": []
   }
 }

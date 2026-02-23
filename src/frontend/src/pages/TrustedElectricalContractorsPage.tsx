@@ -50,17 +50,9 @@ export default function TrustedElectricalContractorsPage() {
         </div>
       </section>
 
-      {/* Company Overview */}
-      <section className="relative py-16 bg-muted/30 overflow-hidden">
-        {/* Faint Background Logo */}
-        <div
-          className="absolute inset-0 bg-center bg-no-repeat opacity-[0.08]"
-          style={{
-            backgroundImage: 'url(/assets/BMLOGO-1.jpg)',
-            backgroundSize: 'contain',
-          }}
-        />
-        <div className="container relative z-10">
+      {/* Company Overview with BM Watermark */}
+      <section className="relative py-16 bg-muted/30 overflow-hidden bm-watermark">
+        <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold tracking-tight mb-6">About BM ENTERPRISES</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
@@ -73,8 +65,8 @@ export default function TrustedElectricalContractorsPage() {
         </div>
       </section>
 
-      {/* Highlights */}
-      <section className="py-16">
+      {/* Highlights with BM Watermark */}
+      <section className="py-16 bm-watermark">
         <div className="container">
           <h2 className="text-3xl font-bold tracking-tight text-center mb-12">Why Choose Us</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -129,15 +121,15 @@ export default function TrustedElectricalContractorsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-primary text-primary-foreground">
+      {/* CTA Section with BM Watermark */}
+      <section className="py-16 bg-muted/30 bm-watermark">
         <div className="container text-center">
           <h2 className="text-3xl font-bold tracking-tight mb-4">Ready to Start Your Project?</h2>
-          <p className="text-lg mb-8 opacity-90">
+          <p className="text-lg text-muted-foreground mb-8">
             Contact us today for a consultation and discover how we can power your success.
           </p>
           <Link to="/enquiry">
-            <Button size="lg" variant="secondary" className="font-semibold">
+            <Button size="lg" className="font-semibold">
               Request a Quote
             </Button>
           </Link>

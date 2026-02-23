@@ -35,97 +35,64 @@ export default function MajorProjectsPage() {
     },
   ];
 
-  const ongoingProjectsImages = [
-    {
-      src: '/assets/WhatsApp Image 2026-02-16 at 8.58.51 PM (1).jpeg',
-      alt: 'Electrical busbar installation with color-coded phase conductors showing blue, yellow, and red phases',
-    },
-    {
-      src: '/assets/WhatsApp Image 2026-02-16 at 8.58.52 PM.jpeg',
-      alt: 'Industrial electrical control room with rows of control panels and cable management systems',
-    },
-    {
-      src: '/assets/WhatsApp Image 2026-02-16 at 8.58.51 PM (1)-1.jpeg',
-      alt: 'Three-phase busbar system with organized conductor arrangement and mounting hardware',
-    },
-    {
-      src: '/assets/WhatsApp Image 2026-02-16 at 8.58.51 PM (1)-2.jpeg',
-      alt: 'Close-up view of electrical busbar connections with phase separation insulators',
-    },
-    {
-      src: '/assets/image.png',
-      alt: 'Industrial chimney with blue and white striped pattern and safety ladder installation',
-    },
-    {
-      src: '/assets/WhatsApp Image 2026-02-16 at 8.58.56 PM-1.jpeg',
-      alt: 'Professional electrical distribution panel with organized circuit breakers and color-coded wiring system',
-    },
-    {
-      src: '/assets/WhatsApp Image 2026-02-16 at 8.58.59 PM-1.jpeg',
-      alt: 'Industrial cable tray installation with overhead steel framework and electrical infrastructure',
-    },
-    {
-      src: '/assets/WhatsApp Image 2026-02-16 at 8.59.03 PM (1).jpeg',
-      alt: 'Heavy-duty electrical busbar system with multi-phase color-coded conductors and mounting brackets',
-    },
-    {
-      src: '/assets/WhatsApp Image 2026-02-16 at 8.58.59 PM (1).jpeg',
-      alt: 'Industrial electrical room with cable tray systems and organized electrical infrastructure',
-    },
-    {
-      src: '/assets/WhatsApp Image 2026-02-16 at 8.58.55 PM.jpeg',
-      alt: 'Large-scale electrical control room with multiple control panels and comprehensive cable management',
-    },
+  const ongoingProjectImages = [
+    { src: '/assets/WhatsApp Image 2026-02-16 at 8.58.51 PM (1).jpeg', alt: 'Ongoing electrical installation project - cable management and wiring' },
+    { src: '/assets/WhatsApp Image 2026-02-16 at 8.58.52 PM (1).jpeg', alt: 'Ongoing electrical installation project - panel installation' },
+    { src: '/assets/WhatsApp Image 2026-02-16 at 8.58.52 PM (2).jpeg', alt: 'Ongoing electrical installation project - conduit work' },
+    { src: '/assets/WhatsApp Image 2026-02-16 at 8.58.52 PM.jpeg', alt: 'Ongoing electrical installation project - electrical systems' },
+    { src: '/assets/WhatsApp Image 2026-02-16 at 8.58.54 PM (1).jpeg', alt: 'Ongoing electrical installation project - construction site electrical work' },
+    { src: '/assets/WhatsApp Image 2026-02-16 at 8.58.54 PM.jpeg', alt: 'Ongoing electrical installation project - heavy machinery and electrical equipment' },
+    { src: '/assets/WhatsApp Image 2026-02-16 at 8.58.55 PM.jpeg', alt: 'Ongoing electrical installation project - steel framework and electrical infrastructure' },
+    { src: '/assets/WhatsApp Image 2026-02-16 at 8.58.56 PM-1.jpeg', alt: 'Ongoing electrical installation project - construction progress' },
+    { src: '/assets/WhatsApp Image 2026-02-16 at 8.58.56 PM.jpeg', alt: 'Ongoing electrical installation project - electrical panel and control systems' },
+    { src: '/assets/WhatsApp Image 2026-02-16 at 8.58.57 PM (1).jpeg', alt: 'Ongoing electrical installation project - cable tray and conduit work' },
   ];
 
   return (
     <div className="py-16">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h1 className="text-4xl font-bold tracking-tight mb-6">Major Projects</h1>
-          
-          {/* Government Approval & License Block */}
-          <div className="mb-6 py-4 px-6 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-lg border-2 border-primary/30">
-            <div className="font-bold text-xl text-dark-red mb-2">
-              Govt. Approved Electrical Contractor
-            </div>
-            <div className="font-bold text-lg text-dark-red">
-              License No.: 317320383527122022
-            </div>
-          </div>
-
+          <h1 className="text-4xl font-bold tracking-tight mb-4">Major Projects</h1>
           <p className="text-lg text-muted-foreground">
-            BM ENTERPRISES has successfully delivered complex electrical projects across diverse sectors. Here are some of our notable achievements that demonstrate our capability and expertise.
+            BM ENTERPRISES has successfully completed numerous large-scale electrical projects across various sectors. Our portfolio demonstrates our capability to handle complex installations with precision and professionalism.
           </p>
         </div>
 
         <div className="mb-12">
           <img
-            src="/assets/IMG_20260216_183152.jpg major project.jpeg"
-            alt="Major projects portfolio document showcasing completed electrical installations for Hyundai Motor India, NMDC Limited, and ACG Capsules"
+            src="/assets/generated/major-projects-hero.dim_1600x900.jpg"
+            alt="BM ENTERPRISES major electrical project - large-scale industrial installation"
             className="w-full max-w-5xl mx-auto rounded-lg shadow-lg object-cover"
           />
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-2 mb-16">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              title={project.title}
-              location={project.location}
-              description={project.description}
-            />
-          ))}
-        </div>
-
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight mb-4">Ongoing Projects (Gallery)</h2>
-          <p className="text-lg text-muted-foreground">
-            Take a look at our current electrical installations in progress, showcasing our technical expertise and attention to detail.
+        <div className="mb-12 p-6 bg-muted rounded-lg border-l-4 border-[oklch(var(--dark-red))]">
+          <p className="text-lg font-semibold text-[oklch(var(--dark-red))] mb-2">
+            Government Approved Electrical Contractor
+          </p>
+          <p className="text-muted-foreground">
+            Licensed and certified to undertake electrical projects of all scales. Our credentials include all necessary government approvals and industry certifications.
           </p>
         </div>
 
-        <ImageGalleryGrid images={ongoingProjectsImages} />
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold tracking-tight mb-8 text-center">Completed Projects</h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={index}
+                title={project.title}
+                location={project.location}
+                description={project.description}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h2 className="text-3xl font-bold tracking-tight mb-8 text-center">Ongoing Projects (Gallery)</h2>
+          <ImageGalleryGrid images={ongoingProjectImages} />
+        </div>
       </div>
     </div>
   );

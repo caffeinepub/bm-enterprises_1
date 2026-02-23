@@ -1,11 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Add the uploaded BM logo as a faint background behind the “About BM ENTERPRISES” section on the Trusted Electrical Contractors landing page while keeping the text clearly readable.
+**Goal:** Remove faint BM logo watermark background images from all pages and components.
 
 **Planned changes:**
-- Update the “About BM ENTERPRISES” section in `frontend/src/pages/TrustedElectricalContractorsPage.tsx` to render `BMLOGO-1.jpg` as a low-opacity background image behind the section content.
-- Apply positioning/layering styles so the background does not affect layout or overlap/interfere with text/buttons, and remains readable on desktop and mobile.
-- Ensure the image is referenced/loaded as a static frontend asset (no backend routing).
+- Remove faint watermark background image from SiteHeader component
+- Remove faint watermark background images from ServicesPage, QualitySafetyPolicyPage, MajorClientsPage, MajorProjectsPage, GalleryPage, and EnquiryPage components
+- Delete all watermark-related CSS classes (watermark-bg-primary, watermark-bg-light, watermark-bg-dark) from frontend/src/index.css
 
-**User-visible outcome:** The “About BM ENTERPRISES” section shows a subtle, faint BM logo in the background, with all text and content remaining easy to read across screen sizes.
+**User-visible outcome:** All pages display cleanly without faint watermark backgrounds, maintaining existing layout and content.
