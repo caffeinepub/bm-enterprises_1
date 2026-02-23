@@ -1,125 +1,70 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Remove faint watermark image from header and service sections",
+  "title": "Add BM logo background and About/Why Choose Us sections to TrustedElectricalContractorsPage",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Remove the faint BM logo watermark background image from the SiteHeader component",
+      "summary": "Add BM logo (download-4.webp) as large, faint background image below the names section",
       "acceptanceCriteria": [
-        "The header no longer displays any faint watermark background image",
-        "The header maintains its existing layout and styling without the watermark"
+        "The BM logo (download-4.webp) is displayed as a background image",
+        "The logo appears faint/translucent to not overpower foreground content",
+        "The logo is positioned below the names section",
+        "The logo is displayed in a large size"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/SiteHeader.tsx",
+          "path": "frontend/src/pages/TrustedElectricalContractorsPage.tsx",
           "operation": "modify",
-          "description": "Remove all watermark-related CSS classes (watermark-bg-primary, watermark-bg-light, or watermark-bg-dark) from className attributes in the component. Remove any inline styles or background-image properties that reference the faint BM logo watermark."
+          "description": "Add the BM logo (download-4.webp) as a large, faint background image positioned below the names section. Reference the asset at frontend/public/assets/download-4.webp. Apply CSS styling to make the logo semi-transparent (opacity ~0.1-0.15), center it horizontally, position it below the existing names/credentials section, and scale it to a large size (e.g., width: 600-800px). Use absolute or fixed positioning within a relative container to avoid disrupting existing layout flow."
         }
       ]
     },
     {
       "id": "REQ-2",
-      "summary": "Remove the faint BM logo watermark background image from the ServicesPage component",
+      "summary": "Add 'About BM ENTERPRISES' section with company description",
       "acceptanceCriteria": [
-        "The Services page no longer displays any faint watermark background image",
-        "All service cards and content remain visible and properly styled"
+        "An 'About BM ENTERPRISES' section is present on the page",
+        "The section includes the full company description text provided by the user",
+        "The text is properly formatted and readable"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/pages/ServicesPage.tsx",
+          "path": "frontend/src/pages/TrustedElectricalContractorsPage.tsx",
           "operation": "modify",
-          "description": "Remove all watermark-related CSS classes (watermark-bg-primary, watermark-bg-light, or watermark-bg-dark) from className attributes in the component. Remove any inline styles or background-image properties that reference the faint BM logo watermark or the asset frontend/public/assets/generated/BMLOGO-2-faint.dim_800x800.png."
+          "description": "Add an 'About BM ENTERPRISES' section to the page with the provided company description: 'BM ENTERPRISES is a leading electrical contracting company specializing in commercial, industrial, and residential electrical installations. With hundreds of completed projects and a team of certified electricians and engineers, we deliver excellence in every project.' Position this section after the hero/names area and before the 'Why Choose Us' section. Use semantic HTML (e.g., <section>) with an <h2> heading and paragraph text. Apply consistent styling with existing sections using Tailwind utility classes."
         }
       ]
     },
     {
       "id": "REQ-3",
-      "summary": "Remove the faint BM logo watermark background image from the QualitySafetyPolicyPage component",
+      "summary": "Add 'Why Choose Us' section with four highlighted features",
       "acceptanceCriteria": [
-        "The Quality and Safety Policy page no longer displays any faint watermark background image",
-        "All policy content remains readable and properly formatted"
+        "A 'Why Choose Us' section is present with four distinct feature cards or highlights",
+        "Each feature includes its title and full description text as provided",
+        "The features are visually distinct and easy to scan"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/pages/QualitySafetyPolicyPage.tsx",
+          "path": "frontend/src/pages/TrustedElectricalContractorsPage.tsx",
           "operation": "modify",
-          "description": "Remove all watermark-related CSS classes (watermark-bg-primary, watermark-bg-light, or watermark-bg-dark) from className attributes in the component. Remove any inline styles or background-image properties that reference the faint BM logo watermark or the asset frontend/public/assets/generated/BMLOGO-2-faint.dim_800x800.png."
+          "description": "Add a 'Why Choose Us' section featuring four distinct highlights: (1) Safety First - 'We follow rigorous safety protocols and ensure full compliance with industry standards', (2) Quality Assured - 'Our team of certified professionals uses only premium materials and proven methods', (3) On-Time Delivery - 'We pride ourselves on efficient project management and timely completion', (4) Expert Solutions - 'We provide innovative electrical solutions tailored to your specific needs'. Display these as cards or grid items with icons, titles, and description text. Use a responsive grid layout (e.g., 2x2 on desktop, stacked on mobile) with shadcn Card components or custom styled divs. Position this section after the 'About' section and before the call-to-action."
         }
       ]
     },
     {
       "id": "REQ-4",
-      "summary": "Remove the faint BM logo watermark background image from the MajorClientsPage component",
+      "summary": "Add 'Ready to Start Your Project?' call-to-action section",
       "acceptanceCriteria": [
-        "The Major Clients page no longer displays any faint watermark background image",
-        "The client logos image remains visible without background watermark"
+        "A 'Ready to Start Your Project?' heading is displayed",
+        "The call-to-action text is present",
+        "The section is visually prominent to encourage user action"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/pages/MajorClientsPage.tsx",
+          "path": "frontend/src/pages/TrustedElectricalContractorsPage.tsx",
           "operation": "modify",
-          "description": "Remove all watermark-related CSS classes (watermark-bg-primary, watermark-bg-light, or watermark-bg-dark) from className attributes in the component. Remove any inline styles or background-image properties that reference the faint BM logo watermark or the asset frontend/public/assets/generated/BMLOGO-2-faint.dim_800x800.png."
-        }
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "summary": "Remove the faint BM logo watermark background image from the MajorProjectsPage component",
-      "acceptanceCriteria": [
-        "The Major Projects page no longer displays any faint watermark background image",
-        "All project cards and gallery images display without background watermark"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/MajorProjectsPage.tsx",
-          "operation": "modify",
-          "description": "Remove all watermark-related CSS classes (watermark-bg-primary, watermark-bg-light, or watermark-bg-dark) from className attributes in the component. Remove any inline styles or background-image properties that reference the faint BM logo watermark or the asset frontend/public/assets/generated/BMLOGO-2-faint.dim_800x800.png."
-        }
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "summary": "Remove the faint BM logo watermark background image from the GalleryPage component",
-      "acceptanceCriteria": [
-        "The Gallery page no longer displays any faint watermark background image",
-        "The project image grid displays cleanly without background watermark"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/GalleryPage.tsx",
-          "operation": "modify",
-          "description": "Remove all watermark-related CSS classes (watermark-bg-primary, watermark-bg-light, or watermark-bg-dark) from className attributes in the component. Remove any inline styles or background-image properties that reference the faint BM logo watermark or the asset frontend/public/assets/generated/BMLOGO-2-faint.dim_800x800.png."
-        }
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "summary": "Remove the faint BM logo watermark background image from the EnquiryPage component (Contact Us section)",
-      "acceptanceCriteria": [
-        "The Enquiry/Contact page no longer displays any faint watermark background image",
-        "All forms and feedback sections remain functional and clearly visible"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/EnquiryPage.tsx",
-          "operation": "modify",
-          "description": "Remove all watermark-related CSS classes (watermark-bg-primary, watermark-bg-light, or watermark-bg-dark) from className attributes in the component. Remove any inline styles or background-image properties that reference the faint BM logo watermark or the asset frontend/public/assets/generated/BMLOGO-2-faint.dim_800x800.png."
-        }
-      ]
-    },
-    {
-      "id": "REQ-8",
-      "summary": "Remove all watermark-related CSS classes from frontend/src/index.css",
-      "acceptanceCriteria": [
-        "All watermark utility classes are removed from the CSS file",
-        "No watermark-related CSS remains in the codebase"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/index.css",
-          "operation": "modify",
-          "description": "Remove the custom watermark utility classes (watermark-bg-primary, watermark-bg-light, watermark-bg-dark) that create semi-transparent background images using the BM logo. Delete all CSS rules and definitions related to these watermark classes while preserving all other Tailwind configuration and custom styling."
+          "description": "Add a 'Ready to Start Your Project?' call-to-action section at the bottom of the page content (before the footer). Include the heading 'Ready to Start Your Project?' and the CTA text 'Contact us today for a consultation and discover how we can power your success'. Style this section prominently with centered text, larger font size, and high contrast background (e.g., primary color background with white text) to draw user attention. Optionally include a button linking to the enquiry page using TanStack Router Link component."
         }
       ]
     }

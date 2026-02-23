@@ -1,78 +1,76 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "New project",
-  "architectural_notes": [],
+  "summary": "Electrical contracting company website for BM ENTERPRISES with sections for About, Why Choose Us, and contact",
+  "architectural_notes": [
+    "Website for BM ENTERPRISES electrical contracting company",
+    "Multi-section layout with About, Why Choose Us, and CTA sections",
+    "Background imagery used as design element"
+  ],
   "known_issues": [],
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-siteheader-component",
-      "title": "Remove the faint BM logo watermark background image from the SiteHeader component",
+      "id": "feature-add-the-uploaded-bm-logo-image-download-4-webp-as-a-large-faint-background-image-positioned-below-the-names-section-on-the-trustedelectricalcontractorspage",
+      "title": "Add the uploaded BM logo image (download-4.webp) as a large, faint background image positioned below the names section on the TrustedElectricalContractorsPage",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     },
     {
-      "id": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-servicespage-component",
-      "title": "Remove the faint BM logo watermark background image from the ServicesPage component",
+      "id": "feature-add-an-about-bm-enterprises-section-to-the-trustedelectricalcontractorspage-with-the-provided-company-description-text-explaining-that-bm-enterprises-is-a-leading-electrical-contracting-company-specializing-in-commercial-industrial-and-residential-installations-with-hundreds-of-completed-projects-and-a-team-of-certified-electricians-and-engineers",
+      "title": "Add an 'About BM ENTERPRISES' section to the TrustedElectricalContractorsPage with the provided company description text explaining that BM ENTERPRISES is a leading electrical contracting company specializing in commercial, industrial, and residential installations with hundreds of completed projects and a team of certified electricians and engineers",
       "reqIds": [
         "REQ-2"
       ],
       "version": 1
     },
     {
-      "id": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-qualitysafetypolicypage-component",
-      "title": "Remove the faint BM logo watermark background image from the QualitySafetyPolicyPage component",
+      "id": "feature-add-a-why-choose-us-section-to-the-trustedelectricalcontractorspage-with-four-highlighted-features-safety-first-rigorous-safety-protocols-and-compliance-quality-assured-certified-professionals-with-premium-materials-on-time-delivery-efficient-project-management-and-expert-solutions-innovative-electrical-solutions-tailored-to-needs",
+      "title": "Add a 'Why Choose Us' section to the TrustedElectricalContractorsPage with four highlighted features: Safety First (rigorous safety protocols and compliance), Quality Assured (certified professionals with premium materials), On-Time Delivery (efficient project management), and Expert Solutions (innovative electrical solutions tailored to needs)",
       "reqIds": [
         "REQ-3"
       ],
       "version": 1
     },
     {
-      "id": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-majorclientspage-component",
-      "title": "Remove the faint BM logo watermark background image from the MajorClientsPage component",
+      "id": "feature-add-a-ready-to-start-your-project-call-to-action-section-on-the-trustedelectricalcontractorspage-with-the-text-contact-us-today-for-a-consultation-and-discover-how-we-can-power-your-success",
+      "title": "Add a 'Ready to Start Your Project?' call-to-action section on the TrustedElectricalContractorsPage with the text 'Contact us today for a consultation and discover how we can power your success'",
       "reqIds": [
         "REQ-4"
       ],
       "version": 1
-    },
-    {
-      "id": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-majorprojectspage-component",
-      "title": "Remove the faint BM logo watermark background image from the MajorProjectsPage component",
-      "reqIds": [
-        "REQ-5"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-gallerypage-component",
-      "title": "Remove the faint BM logo watermark background image from the GalleryPage component",
-      "reqIds": [
-        "REQ-6"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-enquirypage-component-contact-us-section",
-      "title": "Remove the faint BM logo watermark background image from the EnquiryPage component (Contact Us section)",
-      "reqIds": [
-        "REQ-7"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-remove-all-watermark-related-css-classes-watermark-bg-primary-watermark-bg-light-watermark-bg-dark-from-frontend-src-index-css",
-      "title": "Remove all watermark-related CSS classes (watermark-bg-primary, watermark-bg-light, watermark-bg-dark) from frontend/src/index.css",
-      "reqIds": [
-        "REQ-8"
-      ],
-      "version": 1
     }
   ],
-  "new_feature_requests": [],
-  "projectName": "Remove faint watermark image from header and service sections",
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Add faint background image below names section in large size",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add About BM ENTERPRISES section with company description",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add Why Choose Us section with four key points (Safety First, Quality Assured, On-Time Delivery, Expert Solutions)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add Ready to Start Your Project call-to-action section",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "BM ENTERPRISES Website",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

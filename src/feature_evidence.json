@@ -2,17 +2,18 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-siteheader-component",
-      "featureTitle": "Remove the faint BM logo watermark background image from the SiteHeader component",
+      "featureId": "feature-add-the-uploaded-bm-logo-image-download-4-webp-as-a-large-faint-background-image-positioned-below-the-names-section-on-the-trustedelectricalcontractorspage",
+      "featureTitle": "Add the uploaded BM logo image (download-4.webp) as a large, faint background image positioned below the names section on the TrustedElectricalContractorsPage",
       "files": [
-        "frontend/src/components/SiteHeader.tsx"
+        "frontend/src/pages/TrustedElectricalContractorsPage.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
         "shadcn-ui@1.0.0",
         "build-template-react@1.0.0",
         "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
       ],
       "testIds": [
         "REQ-1"
@@ -20,17 +21,18 @@
       "confidence": "high"
     },
     {
-      "featureId": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-servicespage-component",
-      "featureTitle": "Remove the faint BM logo watermark background image from the ServicesPage component",
+      "featureId": "feature-add-an-about-bm-enterprises-section-to-the-trustedelectricalcontractorspage-with-the-provided-company-description-text-explaining-that-bm-enterprises-is-a-leading-electrical-contracting-company-specializing-in-commercial-industrial-and-residential-installations-with-hundreds-of-completed-projects-and-a-team-of-certified-electricians-and-engineers",
+      "featureTitle": "Add an 'About BM ENTERPRISES' section to the TrustedElectricalContractorsPage with the provided company description text explaining that BM ENTERPRISES is a leading electrical contracting company specializing in commercial, industrial, and residential installations with hundreds of completed projects and a team of certified electricians and engineers",
       "files": [
-        "frontend/src/pages/ServicesPage.tsx"
+        "frontend/src/pages/TrustedElectricalContractorsPage.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
         "shadcn-ui@1.0.0",
         "build-template-react@1.0.0",
         "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
       ],
       "testIds": [
         "REQ-2"
@@ -38,17 +40,18 @@
       "confidence": "high"
     },
     {
-      "featureId": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-qualitysafetypolicypage-component",
-      "featureTitle": "Remove the faint BM logo watermark background image from the QualitySafetyPolicyPage component",
+      "featureId": "feature-add-a-why-choose-us-section-to-the-trustedelectricalcontractorspage-with-four-highlighted-features-safety-first-rigorous-safety-protocols-and-compliance-quality-assured-certified-professionals-with-premium-materials-on-time-delivery-efficient-project-management-and-expert-solutions-innovative-electrical-solutions-tailored-to-needs",
+      "featureTitle": "Add a 'Why Choose Us' section to the TrustedElectricalContractorsPage with four highlighted features: Safety First (rigorous safety protocols and compliance), Quality Assured (certified professionals with premium materials), On-Time Delivery (efficient project management), and Expert Solutions (innovative electrical solutions tailored to needs)",
       "files": [
-        "frontend/src/pages/QualitySafetyPolicyPage.tsx"
+        "frontend/src/pages/TrustedElectricalContractorsPage.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
         "shadcn-ui@1.0.0",
         "build-template-react@1.0.0",
         "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
       ],
       "testIds": [
         "REQ-3"
@@ -56,92 +59,21 @@
       "confidence": "high"
     },
     {
-      "featureId": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-majorclientspage-component",
-      "featureTitle": "Remove the faint BM logo watermark background image from the MajorClientsPage component",
+      "featureId": "feature-add-a-ready-to-start-your-project-call-to-action-section-on-the-trustedelectricalcontractorspage-with-the-text-contact-us-today-for-a-consultation-and-discover-how-we-can-power-your-success",
+      "featureTitle": "Add a 'Ready to Start Your Project?' call-to-action section on the TrustedElectricalContractorsPage with the text 'Contact us today for a consultation and discover how we can power your success'",
       "files": [
-        "frontend/src/pages/MajorClientsPage.tsx"
+        "frontend/src/pages/TrustedElectricalContractorsPage.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
         "shadcn-ui@1.0.0",
         "build-template-react@1.0.0",
         "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
       ],
       "testIds": [
         "REQ-4"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-majorprojectspage-component",
-      "featureTitle": "Remove the faint BM logo watermark background image from the MajorProjectsPage component",
-      "files": [
-        "frontend/src/pages/MajorProjectsPage.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-5"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-gallerypage-component",
-      "featureTitle": "Remove the faint BM logo watermark background image from the GalleryPage component",
-      "files": [
-        "frontend/src/pages/GalleryPage.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-6"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-remove-the-faint-bm-logo-watermark-background-image-from-the-enquirypage-component-contact-us-section",
-      "featureTitle": "Remove the faint BM logo watermark background image from the EnquiryPage component (Contact Us section)",
-      "files": [
-        "frontend/src/pages/EnquiryPage.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-7"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-remove-all-watermark-related-css-classes-watermark-bg-primary-watermark-bg-light-watermark-bg-dark-from-frontend-src-index-css",
-      "featureTitle": "Remove all watermark-related CSS classes (watermark-bg-primary, watermark-bg-light, watermark-bg-dark) from frontend/src/index.css",
-      "files": [
-        "frontend/src/index.css"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-8"
       ],
       "confidence": "high"
     }

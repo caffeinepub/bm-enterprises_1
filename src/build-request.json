@@ -1,151 +1,97 @@
 {
   "kind": "build_request",
-  "title": "Remove faint watermark image from header and service sections",
+  "title": "Add BM logo as faint background image and About/Why Choose Us sections",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Remove the faint BM logo watermark background image from the SiteHeader component",
+      "text": "Add the uploaded BM logo image (download-4.webp) as a large, faint background image positioned below the names section on the TrustedElectricalContractorsPage",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-user-final"
+          "msg-latest"
         ],
         "quotes": [
-          "REMOVE/DELETE THIS IMAGE IN FAINT : IN HEADER"
+          "ADD THIS IMAGE IN FAINT : ON BACKGROUND BELOW NAMES - IN BIG SIZE"
         ]
       },
       "acceptanceCriteria": [
-        "The header no longer displays any faint watermark background image",
-        "The header maintains its existing layout and styling without the watermark"
+        "The BM logo (download-4.webp) is displayed as a background image",
+        "The logo appears faint/translucent to not overpower foreground content",
+        "The logo is positioned below the names section",
+        "The logo is displayed in a large size"
       ]
     },
     {
       "id": "REQ-2",
-      "text": "Remove the faint BM logo watermark background image from the ServicesPage component",
+      "text": "Add an 'About BM ENTERPRISES' section to the TrustedElectricalContractorsPage with the provided company description text explaining that BM ENTERPRISES is a leading electrical contracting company specializing in commercial, industrial, and residential installations with hundreds of completed projects and a team of certified electricians and engineers",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-user-final"
+          "msg-latest"
         ],
         "quotes": [
-          "ON BACKGROUND BELOW NAMES - Our Services"
+          "About BM ENTERPRISES",
+          "BM ENTERPRISES is a leading electrical contracting company specializing in commercial, industrial, and residential electrical installations"
         ]
       },
       "acceptanceCriteria": [
-        "The Services page no longer displays any faint watermark background image",
-        "All service cards and content remain visible and properly styled"
+        "An 'About BM ENTERPRISES' section is present on the page",
+        "The section includes the full company description text provided by the user",
+        "The text is properly formatted and readable"
       ]
     },
     {
       "id": "REQ-3",
-      "text": "Remove the faint BM logo watermark background image from the QualitySafetyPolicyPage component",
+      "text": "Add a 'Why Choose Us' section to the TrustedElectricalContractorsPage with four highlighted features: Safety First (rigorous safety protocols and compliance), Quality Assured (certified professionals with premium materials), On-Time Delivery (efficient project management), and Expert Solutions (innovative electrical solutions tailored to needs)",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-user-final"
+          "msg-latest"
         ],
         "quotes": [
-          "ON BACKGROUND BELOW NAMES - Quality and Safety Policy"
+          "Why Choose Us",
+          "Safety First",
+          "Quality Assured",
+          "On-Time Delivery",
+          "Expert Solutions"
         ]
       },
       "acceptanceCriteria": [
-        "The Quality and Safety Policy page no longer displays any faint watermark background image",
-        "All policy content remains readable and properly formatted"
+        "A 'Why Choose Us' section is present with four distinct feature cards or highlights",
+        "Each feature includes its title and full description text as provided",
+        "The features are visually distinct and easy to scan"
       ]
     },
     {
       "id": "REQ-4",
-      "text": "Remove the faint BM logo watermark background image from the MajorClientsPage component",
+      "text": "Add a 'Ready to Start Your Project?' call-to-action section on the TrustedElectricalContractorsPage with the text 'Contact us today for a consultation and discover how we can power your success'",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-user-final"
+          "msg-latest"
         ],
         "quotes": [
-          "ON BACKGROUND BELOW NAMES - Major Clients"
+          "Ready to Start Your Project?",
+          "Contact us today for a consultation and discover how we can power your success"
         ]
       },
       "acceptanceCriteria": [
-        "The Major Clients page no longer displays any faint watermark background image",
-        "The client logos image remains visible without background watermark"
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "text": "Remove the faint BM logo watermark background image from the MajorProjectsPage component",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-user-final"
-        ],
-        "quotes": [
-          "ON BACKGROUND BELOW NAMES - Major Projects"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The Major Projects page no longer displays any faint watermark background image",
-        "All project cards and gallery images display without background watermark"
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "text": "Remove the faint BM logo watermark background image from the GalleryPage component",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-user-final"
-        ],
-        "quotes": [
-          "ON BACKGROUND BELOW NAMES - Project Gallery"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The Gallery page no longer displays any faint watermark background image",
-        "The project image grid displays cleanly without background watermark"
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "text": "Remove the faint BM logo watermark background image from the EnquiryPage component (Contact Us section)",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-user-final"
-        ],
-        "quotes": [
-          "ON BACKGROUND BELOW NAMES - Contact Us"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The Enquiry/Contact page no longer displays any faint watermark background image",
-        "All forms and feedback sections remain functional and clearly visible"
-      ]
-    },
-    {
-      "id": "REQ-8",
-      "text": "Remove all watermark-related CSS classes (watermark-bg-primary, watermark-bg-light, watermark-bg-dark) from frontend/src/index.css",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-user-final"
-        ]
-      },
-      "acceptanceCriteria": [
-        "All watermark utility classes are removed from the CSS file",
-        "No watermark-related CSS remains in the codebase"
+        "A 'Ready to Start Your Project?' heading is displayed",
+        "The call-to-action text is present",
+        "The section is visually prominent to encourage user action"
       ]
     }
   ],
   "constraints": [
-    "Do not modify backend files",
-    "Preserve all existing functionality and content on each page",
-    "Maintain current layout and styling aside from removing watermark backgrounds"
+    "Use the uploaded image file download-4.webp as the background image source",
+    "Preserve existing content and layout structure of TrustedElectricalContractorsPage",
+    "Maintain consistent styling with existing BM Enterprises design system"
   ],
   "nonGoals": [
-    "Adding new watermark images",
-    "Redesigning page layouts",
-    "Modifying content or text on any pages"
+    "Modifying backend data structures",
+    "Changing other pages besides TrustedElectricalContractorsPage",
+    "Adding interactive functionality beyond what's already present"
   ],
   "imageRequirements": {
     "required": [],

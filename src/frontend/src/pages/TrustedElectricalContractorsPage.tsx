@@ -50,9 +50,20 @@ export default function TrustedElectricalContractorsPage() {
         </div>
       </section>
 
-      {/* Company Overview with BM Watermark */}
-      <section className="relative py-16 bg-muted/30 overflow-hidden bm-watermark">
-        <div className="container">
+      {/* Company Overview with Large BM Logo Background */}
+      <section className="relative py-16 bg-muted/30 overflow-hidden">
+        {/* Large Faint BM Logo Background */}
+        <div
+          className="absolute inset-0 bg-no-repeat bg-center pointer-events-none"
+          style={{
+            backgroundImage: 'url(/assets/download-4.webp)',
+            backgroundSize: '700px auto',
+            opacity: 0.08,
+            top: '50%',
+            transform: 'translateY(-50%)',
+          }}
+        />
+        <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold tracking-tight mb-6">About BM ENTERPRISES</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
@@ -65,8 +76,8 @@ export default function TrustedElectricalContractorsPage() {
         </div>
       </section>
 
-      {/* Highlights with BM Watermark */}
-      <section className="py-16 bm-watermark">
+      {/* Why Choose Us Section */}
+      <section className="py-16">
         <div className="container">
           <h2 className="text-3xl font-bold tracking-tight text-center mb-12">Why Choose Us</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -121,8 +132,8 @@ export default function TrustedElectricalContractorsPage() {
         </div>
       </section>
 
-      {/* CTA Section with BM Watermark */}
-      <section className="py-16 bg-muted/30 bm-watermark">
+      {/* CTA Section */}
+      <section className="py-16 bg-muted/30">
         <div className="container text-center">
           <h2 className="text-3xl font-bold tracking-tight mb-4">Ready to Start Your Project?</h2>
           <p className="text-lg text-muted-foreground mb-8">
