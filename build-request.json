@@ -1,0 +1,100 @@
+{
+  "kind": "build_request",
+  "title": "Add BM logo as faint background image and About/Why Choose Us sections",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Add the uploaded BM logo image (download-4.webp) as a large, faint background image positioned below the names section on the TrustedElectricalContractorsPage",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "ADD THIS IMAGE IN FAINT : ON BACKGROUND BELOW NAMES - IN BIG SIZE"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The BM logo (download-4.webp) is displayed as a background image",
+        "The logo appears faint/translucent to not overpower foreground content",
+        "The logo is positioned below the names section",
+        "The logo is displayed in a large size"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add an 'About BM ENTERPRISES' section to the TrustedElectricalContractorsPage with the provided company description text explaining that BM ENTERPRISES is a leading electrical contracting company specializing in commercial, industrial, and residential installations with hundreds of completed projects and a team of certified electricians and engineers",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "About BM ENTERPRISES",
+          "BM ENTERPRISES is a leading electrical contracting company specializing in commercial, industrial, and residential electrical installations"
+        ]
+      },
+      "acceptanceCriteria": [
+        "An 'About BM ENTERPRISES' section is present on the page",
+        "The section includes the full company description text provided by the user",
+        "The text is properly formatted and readable"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add a 'Why Choose Us' section to the TrustedElectricalContractorsPage with four highlighted features: Safety First (rigorous safety protocols and compliance), Quality Assured (certified professionals with premium materials), On-Time Delivery (efficient project management), and Expert Solutions (innovative electrical solutions tailored to needs)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Why Choose Us",
+          "Safety First",
+          "Quality Assured",
+          "On-Time Delivery",
+          "Expert Solutions"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A 'Why Choose Us' section is present with four distinct feature cards or highlights",
+        "Each feature includes its title and full description text as provided",
+        "The features are visually distinct and easy to scan"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add a 'Ready to Start Your Project?' call-to-action section on the TrustedElectricalContractorsPage with the text 'Contact us today for a consultation and discover how we can power your success'",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Ready to Start Your Project?",
+          "Contact us today for a consultation and discover how we can power your success"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A 'Ready to Start Your Project?' heading is displayed",
+        "The call-to-action text is present",
+        "The section is visually prominent to encourage user action"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use the uploaded image file download-4.webp as the background image source",
+    "Preserve existing content and layout structure of TrustedElectricalContractorsPage",
+    "Maintain consistent styling with existing BM Enterprises design system"
+  ],
+  "nonGoals": [
+    "Modifying backend data structures",
+    "Changing other pages besides TrustedElectricalContractorsPage",
+    "Adding interactive functionality beyond what's already present"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

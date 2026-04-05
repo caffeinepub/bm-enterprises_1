@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BM ENTERPRISES - Trusted Electrical Contractors</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #60a5fa;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+            --blue-brand: #2563eb;
+            --dark-red: #991b1b;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header Styles */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--blue-brand);
+        }
+
+        nav {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        nav a {
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            border-radius: 0.375rem;
+            transition: all 0.2s;
+        }
+
+        nav a:hover {
+            background-color: var(--bg-light);
+            color: var(--primary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding: 1rem 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .mobile-nav.active {
+            display: flex;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 4rem 0;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--bg-light);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('assets/generated/bm-enterprises-hero.dim_1920x800.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            display: grid;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .hero-text {
+            order: 2;
+        }
+
+        .hero-image {
+            order: 1;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 0.375rem;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .btn-outline {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Company Overview */
+        .company-overview {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .company-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('assets/BMLOGO-1.jpg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.08;
+        }
+
+        .company-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            transition: all 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .card-description {
+            color: var(--text-light);
+        }
+
+        /* Featured Image */
+        .featured-image {
+            margin: 3rem auto;
+            max-width: 1000px;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2,
+        .cta-section p {
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--bg-light);
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            aspect-ratio: 4/3;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* License Block */
+        .license-block {
+            background-color: #fef2f2;
+            border: 2px solid var(--dark-red);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .license-block h3 {
+            color: var(--dark-red);
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .license-block p {
+            color: var(--dark-red);
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* Form Styles */
+        .form-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        label {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        input,
+        textarea,
+        select {
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.375rem;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-notice {
+            background-color: #dbeafe;
+            border: 1px solid #60a5fa;
+            border-radius: 0.375rem;
+            padding: 1rem;
+            margin-top: 1rem;
+            color: #1e40af;
+        }
+
+        /* Contact Info */
+        .contact-grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        /* Legal Details */
+        .legal-grid {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .legal-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background-color: var(--bg-light);
+            border-radius: 0.375rem;
+        }
+
+        .legal-icon {
+            width: 20px;
+            height: 20px;
+            color: var(--primary-color);
+        }
+
+        .legal-label {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .legal-value {
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--bg-light);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.875rem;
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        .footer-bottom a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Lightbox Modal */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -2.5rem;
+            right: 0;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            line-height: 1;
+        }
+
+        .lightbox-close:hover {
+            color: var(--primary-light);
+        }
+
+        /* List Styles */
+        ul {
+            list-style: disc;
+            margin-left: 1.5rem;
+            color: var(--text-light);
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .form-grid.two-col {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+            }
+
+            .hero-text {
+                order: 1;
+            }
+
+            .hero-image {
+                order: 2;
+            }
+
+            .cards-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .cards-grid.three-col {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 767px) {
+            nav {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            section {
+                padding: 2rem 0;
+            }
+        }
+
+        /* Star Rating */
+        .star-rating {
+            display: flex;
+            gap: 0.25rem;
+            color: #fbbf24;
+        }
+
+        .star {
+            font-size: 1.25rem;
+        }
+
+        /* Feedback Card */
+        .feedback-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feedback-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+
+        .feedback-name {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .feedback-date {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        .feedback-message {
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#home" class="logo-section">
+                    <img src="assets/BMLOGO.jpg" alt="BM ENTERPRISES" class="logo-img">
+                    <span class="logo-text">BM ENTERPRISES</span>
+                </a>
+                <nav id="desktop-nav">
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#quality-safety">Quality & Safety</a>
+                    <a href="#clients">Clients</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#enquiry">Enquiry</a>
+                </nav>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+            </div>
+            <nav class="mobile-nav" id="mobile-nav">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#quality-safety">Quality & Safety</a>
+                <a href="#clients">Clients</a>
+                <a href="#projects">Projects</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#enquiry">Enquiry</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Trusted Electrical Contractors</h1>
+                    <p>Delivering excellence in electrical contracting with over two decades of experience. Your partner for safe, reliable, and innovative electrical solutions.</p>
+                    <div class="btn-group">
+                        <a href="#services" class="btn btn-primary">Our Services</a>
+                        <a href="#enquiry" class="btn btn-outline">Get a Quote</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/trusted electrical contactor.jpeg" alt="BM Enterprises certified electrician in safety gear working on industrial electrical control panel">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Overview -->
+    <section class="company-overview">
+        <div class="company-bg"></div>
+        <div class="container">
+            <div class="company-content">
+                <h2>About BM ENTERPRISES</h2>
+                <p>BM ENTERPRISES is a leading electrical contracting company specializing in commercial, industrial, and residential electrical installations. With a commitment to excellence and safety, we have successfully completed hundreds of projects across diverse sectors.</p>
+                <p>Our team of certified electricians and engineers brings expertise, precision, and dedication to every project, ensuring that your electrical systems are installed, maintained, and upgraded to the highest standards.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section>
+        <div class="container">
+            <h2>Why Choose Us</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                    <h3 class="card-title">Safety First</h3>
+                    <p class="card-description">Rigorous safety protocols and compliance with all industry standards to protect our team and your property.</p>
+                </div>
+                <div class="card">
+                    <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                    </svg>
+                    <h3 class="card-title">Quality Assured</h3>
+                    <p class="card-description">Certified professionals using premium materials and proven techniques for lasting results.</p>
+                </div>
+                <div class="card">
+                    <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <h3 class="card-title">On-Time Delivery</h3>
+                    <p class="card-description">Efficient project management ensuring timely completion without compromising quality.</p>
+                </div>
+                <div class="card">
+                    <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    <h3 class="card-title">Expert Solutions</h3>
+                    <p class="card-description">Innovative electrical solutions tailored to your specific needs and industry requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">We provide comprehensive electrical contracting services for commercial, industrial, and residential projects.</p>
+            
+            <div class="featured-image">
+                <img src="assets/our services.jpeg" alt="BM Enterprises electrical services overview">
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <h3 class="card-title">Commercial Electrical</h3>
+                    <p class="card-description">Complete electrical solutions for offices, retail spaces, and commercial buildings.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Industrial Installations</h3>
+                    <p class="card-description">Heavy-duty electrical systems for manufacturing plants and industrial facilities.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Residential Wiring</h3>
+                    <p class="card-description">Safe and efficient electrical installations for homes and apartments.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Maintenance & Repair</h3>
+                    <p class="card-description">Regular maintenance and emergency repair services to keep your systems running.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Panel Upgrades</h3>
+                    <p class="card-description">Modern electrical panel installations and upgrades for enhanced safety and capacity.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Energy Solutions</h3>
+                    <p class="card-description">Energy-efficient lighting and power solutions to reduce costs and environmental impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality & Safety Section -->
+    <section id="quality-safety">
+        <div class="container">
+            <h2>Quality & Safety Policy</h2>
+            
+            <div class="featured-image">
+                <img src="assets/safety policy.jpeg" alt="BM Enterprises safety policy - electrical safety team conducting site inspection">
+            </div>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h3>Our Commitment to Quality</h3>
+                <ul>
+                    <li>ISO-certified quality management systems</li>
+                    <li>Regular training and skill development programs</li>
+                    <li>Use of premium, certified materials and equipment</li>
+                    <li>Comprehensive quality checks at every project stage</li>
+                </ul>
+
+                <h3 style="margin-top: 2rem;">Safety First Approach</h3>
+                <ul>
+                    <li>Strict adherence to national and international safety standards</li>
+                    <li>Personal protective equipment (PPE) for all team members</li>
+                    <li>Regular safety audits and risk assessments</li>
+                    <li>Emergency response protocols and training</li>
+                </ul>
+
+                <h3 style="margin-top: 2rem;">Compliance & Certifications</h3>
+                <ul>
+                    <li>Licensed electrical contractors with valid certifications</li>
+                    <li>Compliance with local electrical codes and regulations</li>
+                    <li>Regular inspections and documentation</li>
+                    <li>Insurance coverage for all projects</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Major Clients Section -->
+    <section id="clients">
+        <div class="container">
+            <h2>Major Clients</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">We are proud to serve a diverse range of clients across various industries.</p>
+            
+            <div class="featured-image">
+                <img src="assets/major clients.jpeg" alt="BM Enterprises major clients">
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <h3 class="card-title">Government Agencies</h3>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Manufacturing Units</h3>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Commercial Complexes</h3>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Educational Institutions</h3>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Healthcare Facilities</h3>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Residential Projects</h3>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 2rem; font-size: 1.125rem; font-weight: 600;">And many more...</p>
+        </div>
+    </section>
+
+    <!-- Major Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Major Projects</h2>
+            
+            <div class="license-block">
+                <h3>Government Approved Electrical Contractor</h3>
+                <p>License No.: 317320383527122022</p>
+            </div>
+
+            <div class="featured-image">
+                <img src="assets/major project.jpeg" alt="BM Enterprises major project">
+            </div>
+
+            <div class="cards-grid three-col">
+                <div class="card">
+                    <h3 class="card-title">Industrial Complex - Phase 1</h3>
+                    <p class="card-description"><strong>Location:</strong> Industrial Area, Sector 5</p>
+                    <p class="card-description">Complete electrical installation for a 50,000 sq ft manufacturing facility including power distribution, lighting, and control systems.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Commercial Tower Electrification</h3>
+                    <p class="card-description"><strong>Location:</strong> Business District</p>
+                    <p class="card-description">15-story commercial building with advanced electrical systems, backup power, and energy management solutions.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Residential Complex Wiring</h3>
+                    <p class="card-description"><strong>Location:</strong> Green Valley Township</p>
+                    <p class="card-description">200+ residential units with modern electrical infrastructure, smart home integration, and safety systems.</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 3rem; text-align: center;">Ongoing Projects (Gallery)</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox('assets/generated/bm-enterprises-gallery-01.dim_1200x800.png')">
+                    <img src="assets/generated/bm-enterprises-gallery-01.dim_1200x800.png" alt="BM Enterprises project gallery image 1">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/generated/bm-enterprises-gallery-02.dim_1200x800.png')">
+                    <img src="assets/generated/bm-enterprises-gallery-02.dim_1200x800.png" alt="BM Enterprises project gallery image 2">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/generated/bm-enterprises-gallery-03.dim_1200x800.png')">
+                    <img src="assets/generated/bm-enterprises-gallery-03.dim_1200x800.png" alt="BM Enterprises project gallery image 3">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/generated/bm-enterprises-gallery-04.dim_1200x800.png')">
+                    <img src="assets/generated/bm-enterprises-gallery-04.dim_1200x800.png" alt="BM Enterprises project gallery image 4">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/generated/bm-enterprises-gallery-05.dim_1200x800.png')">
+                    <img src="assets/generated/bm-enterprises-gallery-05.dim_1200x800.png" alt="BM Enterprises project gallery image 5">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/generated/bm-enterprises-gallery-06.dim_1200x800.png')">
+                    <img src="assets/generated/bm-enterprises-gallery-06.dim_1200x800.png" alt="BM Enterprises project gallery image 6">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/WhatsApp Image 2026-02-16 at 8.58.51 PM (1).jpeg')">
+                    <img src="assets/WhatsApp Image 2026-02-16 at 8.58.51 PM (1).jpeg" alt="Electrical installation work">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/WhatsApp Image 2026-02-16 at 8.58.52 PM.jpeg')">
+                    <img src="assets/WhatsApp Image 2026-02-16 at 8.58.52 PM.jpeg" alt="Electrical panel installation">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/WhatsApp Image 2026-02-16 at 8.58.54 PM.jpeg')">
+                    <img src="assets/WhatsApp Image 2026-02-16 at 8.58.54 PM.jpeg" alt="Construction site electrical work">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/WhatsApp Image 2026-02-16 at 8.58.56 PM.jpeg')">
+                    <img src="assets/WhatsApp Image 2026-02-16 at 8.58.56 PM.jpeg" alt="Cable management system">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <h2>Project Gallery</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Explore our completed projects and ongoing work showcasing our expertise in electrical contracting.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox('assets/generated/bm-enterprises-gallery-01.dim_1200x800.png')">
+                    <img src="assets/generated/bm-enterprises-gallery-01.dim_1200x800.png" alt="Gallery image 1">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/generated/bm-enterprises-gallery-02.dim_1200x800.png')">
+                    <img src="assets/generated/bm-enterprises-gallery-02.dim_1200x800.png" alt="Gallery image 2">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/generated/bm-enterprises-gallery-03.dim_1200x800.png')">
+                    <img src="assets/generated/bm-enterprises-gallery-03.dim_1200x800.png" alt="Gallery image 3">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/generated/bm-enterprises-gallery-04.dim_1200x800.png')">
+                    <img src="assets/generated/bm-enterprises-gallery-04.dim_1200x800.png" alt="Gallery image 4">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/generated/bm-enterprises-gallery-05.dim_1200x800.png')">
+                    <img src="assets/generated/bm-enterprises-gallery-05.dim_1200x800.png" alt="Gallery image 5">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/generated/bm-enterprises-gallery-06.dim_1200x800.png')">
+                    <img src="assets/generated/bm-enterprises-gallery-06.dim_1200x800.png" alt="Gallery image 6">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/WhatsApp Image 2026-02-16 at 8.58.51 PM (1).jpeg')">
+                    <img src="assets/WhatsApp Image 2026-02-16 at 8.58.51 PM (1).jpeg" alt="Electrical installation">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/WhatsApp Image 2026-02-16 at 8.58.52 PM (1).jpeg')">
+                    <img src="assets/WhatsApp Image 2026-02-16 at 8.58.52 PM (1).jpeg" alt="Panel work">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/WhatsApp Image 2026-02-16 at 8.58.52 PM (2).jpeg')">
+                    <img src="assets/WhatsApp Image 2026-02-16 at 8.58.52 PM (2).jpeg" alt="Construction site">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/WhatsApp Image 2026-02-16 at 8.58.52 PM.jpeg')">
+                    <img src="assets/WhatsApp Image 2026-02-16 at 8.58.52 PM.jpeg" alt="Electrical panel">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/WhatsApp Image 2026-02-16 at 8.58.54 PM (1).jpeg')">
+                    <img src="assets/WhatsApp Image 2026-02-16 at 8.58.54 PM (1).jpeg" alt="Site work">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/WhatsApp Image 2026-02-16 at 8.58.54 PM.jpeg')">
+                    <img src="assets/WhatsApp Image 2026-02-16 at 8.58.54 PM.jpeg" alt="Construction progress">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/WhatsApp Image 2026-02-16 at 8.58.55 PM.jpeg')">
+                    <img src="assets/WhatsApp Image 2026-02-16 at 8.58.55 PM.jpeg" alt="Cable management">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/WhatsApp Image 2026-02-16 at 8.58.56 PM.jpeg')">
+                    <img src="assets/WhatsApp Image 2026-02-16 at 8.58.56 PM.jpeg" alt="Cable installation">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/WhatsApp Image 2026-02-16 at 8.58.57 PM (1).jpeg')">
+                    <img src="assets/WhatsApp Image 2026-02-16 at 8.58.57 PM (1).jpeg" alt="Steel framework">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/WhatsApp Image 2026-02-16 at 8.58.57 PM.jpeg')">
+                    <img src="assets/WhatsApp Image 2026-02-16 at 8.58.57 PM.jpeg" alt="Construction framework">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/WhatsApp Image 2026-02-16 at 8.58.58 PM (1).jpeg')">
+                    <img src="assets/WhatsApp Image 2026-02-16 at 8.58.58 PM (1).jpeg" alt="Heavy machinery">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/WhatsApp Image 2026-02-16 at 8.58.58 PM.jpeg')">
+                    <img src="assets/WhatsApp Image 2026-02-16 at 8.58.58 PM.jpeg" alt="Equipment operation">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/WhatsApp Image 2026-02-16 at 8.58.59 PM.jpeg')">
+                    <img src="assets/WhatsApp Image 2026-02-16 at 8.58.59 PM.jpeg" alt="Safety operations">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('assets/WhatsApp Image 2026-02-16 at 8.59.00 PM.jpeg')">
+                    <img src="assets/WhatsApp Image 2026-02-16 at 8.59.00 PM.jpeg" alt="Site safety">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enquiry Section -->
+    <section id="enquiry">
+        <div class="container">
+            <h2>Contact Us / Enquiry</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h3>Direct Contact</h3>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        <div>
+                            <strong>Phone:</strong><br>
+                            +91 98765 43210
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        <div>
+                            <strong>Email:</strong><br>
+                            info@bmenterprises.com
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <div>
+                            <strong>Address:</strong><br>
+                            123 Industrial Area, Sector 5<br>
+                            City, State - 123456
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 3rem;">Legal & Registration Details</h3>
+                <div class="legal-grid">
+                    <div class="legal-item">
+                        <svg class="legal-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <div>
+                            <span class="legal-label">GSTIN:</span>
+                            <span class="legal-value">22AAAAA0000A1Z5</span>
+                        </div>
+                    </div>
+                    <div class="legal-item">
+                        <svg class="legal-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                        <div>
+                            <span class="legal-label">UDYAM Reg. No.:</span>
+                            <span class="legal-value">UDYAM-XX-00-0000000</span>
+                        </div>
+                    </div>
+                    <div class="legal-item">
+                        <svg class="legal-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <div>
+                            <span class="legal-label">PF No.:</span>
+                            <span class="legal-value">AAAAA0000000000</span>
+                        </div>
+                    </div>
+                    <div class="legal-item">
+                        <svg class="legal-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                        </svg>
+                        <div>
+                            <span class="legal-label">ESIC ID:</span>
+                            <span class="legal-value">00000000000000000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 3rem;">Send Us an Enquiry</h3>
+                <form class="form-grid two-col">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group" style="grid-column: 1 / -1;">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <div style="grid-column: 1 / -1;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Enquiry</button>
+                    </div>
+                </form>
+                <div class="form-notice">
+                    <strong>Note:</strong> This is a static HTML file. Form submissions are not functional. Please visit the live website or contact us directly via phone or email.
+                </div>
+
+                <h3 style="margin-top: 3rem;">Client Feedback</h3>
+                <form class="form-grid">
+                    <div class="form-group">
+                        <label for="feedback-name">Name *</label>
+                        <input type="text" id="feedback-name" name="feedback-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedback-contact">Email or Phone *</label>
+                        <input type="text" id="feedback-contact" name="feedback-contact" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rating">Rating *</label>
+                        <select id="rating" name="rating" required>
+                            <option value="">Select rating</option>
+                            <option value="5">5 - Excellent</option>
+                            <option value="4">4 - Very Good</option>
+                            <option value="3">3 - Good</option>
+                            <option value="2">2 - Fair</option>
+                            <option value="1">1 - Poor</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="grid-column: 1 / -1;">
+                        <label for="feedback-message">Your Feedback *</label>
+                        <textarea id="feedback-message" name="feedback-message" required></textarea>
+                    </div>
+                    <div class="form-group" style="grid-column: 1 / -1;">
+                        <label for="suggestions">Suggestions (Optional)</label>
+                        <textarea id="suggestions" name="suggestions"></textarea>
+                    </div>
+                    <div style="grid-column: 1 / -1;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Feedback</button>
+                    </div>
+                </form>
+                <div class="form-notice">
+                    <strong>Note:</strong> This is a static HTML file. Form submissions are not functional. Please visit the live website to submit feedback.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Contact us today for a consultation and discover how we can power your success.</p>
+            <a href="#enquiry" class="btn btn-secondary">Request a Quote</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <img src="assets/BMLOGO.jpg" alt="BM ENTERPRISES" style="height: 32px; width: auto;">
+                        <span style="font-weight: 700; font-size: 1rem;">BM ENTERPRISES</span>
+                    </div>
+                    <p style="font-size: 0.875rem;">Your trusted partner for electrical contracting solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#services">Services</a>
+                        <a href="#quality-safety">Quality & Safety</a>
+                        <a href="#clients">Clients</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>More Links</h4>
+                    <div class="footer-links">
+                        <a href="#projects">Projects</a>
+                        <a href="#gallery">Gallery</a>
+                        <a href="#enquiry">Enquiry</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p style="font-size: 0.875rem;">
+                        123 Industrial Area, Sector 5<br>
+                        City, State - 123456<br>
+                        Phone: +91 98765 43210<br>
+                        Email: info@bmenterprises.com
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; <span id="current-year"></span> BM ENTERPRISES. All rights reserved.</div>
+                <div>Built with ❤️ using <a href="https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=bm-enterprises" target="_blank" rel="noopener noreferrer">caffeine.ai</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <img id="lightbox-img" src="" alt="Enlarged view">
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-nav').classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-nav a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-nav').classList.remove('active');
+            });
+        });
+
+        // Lightbox functions
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        // Close lightbox on background click
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
